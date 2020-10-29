@@ -10,22 +10,76 @@
   <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font">
   <link rel="preload" href="fonts/Poppins-Regular.woff" as="font">
   <link href="css/style.min.css" rel="stylesheet">
+
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url("js/pixel-glass/preview/index-mobile.jpg");
+    }
+
+    /* Планшет */
+    @media (min-width: 768px) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url("js/pixel-glass/preview/index-tablet.jpg");
+      }
+    }
+
+    /* Десктоп */
+    @media (min-width: 1024px) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url("js/pixel-glass/preview/index-desktop.jpg");
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
+  <script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
+  <!-- // Pixel Glass -->
+
 </head>
 
 <body>
-  <header class="page-header">
-    <div class="page-header__wrap">
-      <form class="page-header__search">
-        <label for "search" aria-label=Search"></label>
-        <input type="search" id="search" name="site-search" placeholder="Type here to search">
-      </form>
-      <a class="page-header__logo">
-        <img class="page-header__logo-img" src="img/logo.svg" width="66" height="66" alt="Online store logo">
-      </a>
-      <ul class="page-header__user-list">
-        <li class="page-header__user-item">Login</li>
-        <li class="page-header__user-item">Cart 0</li>
-      </ul>
+  <header class="page-header  page-header--closed">
+    <div class="page-header__container">
+      <div class="page-header__wrap">
+        <button type="button" class="page-header__toggle">
+          <span class="page-header__icon"></span>
+        </button>
+        <form class="page-header__search">
+          <label class="page-header__search-label" for "search" aria-label=Search">
+            <input type="search" id="search" name="site-search" placeholder="Type here to search">
+          </label>
+        </form>
+        <a class="page-header__logo">
+          <img src="img/logo.svg" width="66" height="66" alt="Online store logo">
+        </a>
+        <a href="#" class="page-header__login">Login</a>
+        <nav class="page-header__navigation">
+          <div class="page-header__catalog-menu">
+            <a href="#" class="page-header__link page-header__link--catalog">What’s new</a>
+            <a href="#" class="page-header__link page-header__link--catalog">Chokers</a>
+            <a href="#" class="page-header__link page-header__link--catalog">Necklaces</a>
+            <a href="#" class="page-header__link page-header__link--catalog">Rings</a>
+            <a href="#" class="page-header__link page-header__link--catalog">Earrings</a>
+          </div>
+          <div class="page-header__site-menu">
+            <a href="#" class="page-header__link page-header__link--site">About CH</a>
+            <a href="#" class="page-header__link page-header__link--site">Stores & Hours</a>
+            <a href="#" class="page-header__link page-header__link--site">Contact Us</a>
+          </div>
+        </nav>
+        <a href="#" class="page-header__cart">
+          <svg width="18" height="16">
+            <use xlink:href="img/sprite.svg#cart-icon"></use>
+          </svg>
+          <span>Cart</span>
+          <span>0</span>
+        </a>
+      </div>
     </div>
     <div class="page-header__intro">
       <p>PERFECTION</p>
@@ -34,7 +88,7 @@
   </header>
   <main class="page-main">
     <div class="page-main__wrap">
-      <h1>Online jewelry store</h1>
+      <h1 class="visually-hidden">Online jewelry store</h1>
       <section class="page-main__section new">
         <a class="new__prev" aria-label="flip left">
           <svg class="new__arrow" width="29" height="9">
@@ -381,47 +435,47 @@
         <a href="#" class="page-footer__delivery-link">Delivery</a>
       </li>
     </ul>
-    <ul class="page-header__about">
-      <li class="page-header__about-item">
-        <a href="#" class="page-header__about-link">About CH</a>
+    <ul class="page-footer__about">
+      <li class="page-footer__about-item">
+        <a href="#" class="page-footer__about-link">About CH</a>
       </li>
-      <li class="page-header__about-item">
-        <a href="#" class="page-header__about-link">Stores & Hours</a>
+      <li class="page-footer__about-item">
+        <a href="#" class="page-footer__about-link">Stores & Hours</a>
       </li>
-      <li class="page-header__about-item">
-        <a href="#" class="page-header__about-link">Jobs</a>
+      <li class="page-footer__about-item">
+        <a href="#" class="page-footer__about-link">Jobs</a>
       </li>
-      <li class="page-header__about-item">
-        <a href="#" class="page-header__about-link">Contact Us</a>
+      <li class="page-footer__about-item">
+        <a href="#" class="page-footer__about-link">Contact Us</a>
       </li>
     </ul>
-    <ul class="page-header__socials">
-      <li class="page-header__socials-item">
-        <a href="#" class="page-header__socials-link" aria-label="Facebook">
+    <ul class="page-footer__socials">
+      <li class="page-footer__socials-item">
+        <a href="#" class="page-footer__socials-link" aria-label="Facebook">
           <svg width="8" height="15">
             <use xlink:href="img/sprite.svg#facebook-icon"></use>
           </svg>
           <span>Facebook</span>
         </a>
       </li>
-      <li class="page-header__socials-item">
-        <a href="#" class="page-header__socials-link" aria-label="Instagram">
+      <li class="page-footer__socials-item">
+        <a href="#" class="page-footer__socials-link" aria-label="Instagram">
           <svg width="15" height="15">
             <use xlink:href="img/sprite.svg#instagram-icon"></use>
           </svg>
           <span>Instagram</span>
         </a>
       </li>
-      <li class="page-header__socials-item">
-        <a href="#" class="page-header__socials-link" aria-label="Pinterest">
+      <li class="page-footer__socials-item">
+        <a href="#" class="page-footer__socials-link" aria-label="Pinterest">
           <svg width="15" height="15">
             <use xlink:href="img/sprite.svg#pinterest-icon"></use>
           </svg>
           <span>Pinterest</span>
         </a>
       </li>
-      <li class="page-header__socials-item">
-        <a href="#" class="page-header__socials-link" aria-label="Twitter">
+      <li class="page-footer__socials-item">
+        <a href="#" class="page-footer__socials-link" aria-label="Twitter">
           <svg width="15" height="13">
             <use xlink:href="img/sprite.svg#twitter-icon"></use>
           </svg>

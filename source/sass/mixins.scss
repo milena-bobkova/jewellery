@@ -9,6 +9,18 @@
   margin: 0;
 }
 
+@mixin text($font-weight, $font-size, $line-height) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin pseudo($display: block, $position: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $position;
+}
+
 @mixin tablet {
   @media (max-width: $tablet-max) {
     @content;
