@@ -58,7 +58,7 @@
           <img src="img/logo.svg" width="66" height="66" alt="Online store logo">
         </a>
         <a href="#" class="page-header__login">Login</a>
-        <nav class="page-header__navigation--index">
+        <nav class="page-header__navigation page-header__navigation--index">
           <div class="page-header__catalog-menu">
             <a href="#" class="page-header__link page-header__link--catalog">What’s new</a>
             <a href="#" class="page-header__link page-header__link--catalog">Chokers</a>
@@ -410,6 +410,30 @@
       </li>
     </ul>
   </footer>
+
+  <section class="modal-login modal">
+    <div class="modal-login__wrap">
+      <button type="button" class="modal__close" aria-label="Close"></button>
+    </div>
+    <h2>Log In</h2>
+    <form class="modal-login__form">
+      <label>
+        <input id="email" type="email" name="user-email" placeholder="Your E-mail">
+      </label>
+      <div class="modal-login__password-wrap">
+        <label>
+          <input id="password" type="email" name="user-email" placeholder="Password">
+        </label>
+        <a href="#" class="modal-login__forgot">Forgot your password?</a>
+      </div>
+      <button class="modal-login__submit" type="submit" aria-label="Log in">Log in</button>
+    </form>
+    <div class="modal-login__info">
+      <p>Don’t have an account?
+        <a href="#" class="modal-login__sign-up">Sign up</a>
+      </p>
+    </div>
+  </section>
 
   <script src="js/main.js"></script>
 </body>

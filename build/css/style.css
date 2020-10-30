@@ -94,9 +94,11 @@ a {
     display: none; }
   .page-header--closed .page-header__navigation--index .page-header__site-menu {
     display: none; }
-  .page-header--closed .page-header__navigation--catalog .page-header__catalog-menu {
+  .page-header--closed .page-header__navigation--catalog .page-header__catalog-menu,
+  .page-header--closed .page-header__navigation--card .page-header__catalog-menu {
     display: block; }
-  .page-header--closed .page-header__navigation--catalog .page-header__site-menu {
+  .page-header--closed .page-header__navigation--catalog .page-header__site-menu,
+  .page-header--closed .page-header__navigation--card .page-header__site-menu {
     display: none; }
   .page-header--closed .page-header__search {
     display: none; }
@@ -193,15 +195,18 @@ a {
     .page-header--opened .page-header__navigation--index .page-header__site-menu {
       margin: 0 0 32px 0;
       display: block; }
-  .page-header--opened .page-header__navigation--catalog {
+  .page-header--opened .page-header__navigation--catalog,
+  .page-header--opened .page-header__navigation--card {
     width: 100%;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2; }
-    .page-header--opened .page-header__navigation--catalog .page-header__catalog-menu {
+    .page-header--opened .page-header__navigation--catalog .page-header__catalog-menu,
+    .page-header--opened .page-header__navigation--card .page-header__catalog-menu {
       margin: 0 0 40px 0;
       display: block; }
-    .page-header--opened .page-header__navigation--catalog .page-header__site-menu {
+    .page-header--opened .page-header__navigation--catalog .page-header__site-menu,
+    .page-header--opened .page-header__navigation--card .page-header__site-menu {
       margin: 0 0 32px 0;
       display: block; }
   .page-header--opened .page-header__link {
@@ -305,10 +310,12 @@ a {
 .page-header__navigation--index .page-header__site-menu {
   display: none; }
 
-.page-header__navigation--catalog .page-header__catalog-menu {
+.page-header__navigation--catalog .page-header__catalog-menu,
+.page-header__navigation--card .page-header__catalog-menu {
   display: block; }
 
-.page-header__navigation--catalog .page-header__site-menu {
+.page-header__navigation--catalog .page-header__site-menu,
+.page-header__navigation--card .page-header__site-menu {
   display: none; }
 
 .page-header__fix {
