@@ -27,8 +27,24 @@
     }
 
     &--closed {
-      .page-header__navigation {
-        display: none;
+      .page-header__navigation--index {
+        .page-header__catalog-menu {
+          display: none;
+        }
+
+        .page-header__site-menu {
+          display: none;
+        }
+      }
+
+      .page-header__navigation--catalog {
+        .page-header__catalog-menu {
+          display: block;
+        }
+
+        .page-header__site-menu {
+          display: none;
+        }
       }
 
       .page-header__search {
@@ -135,12 +151,34 @@
         color: $white;
       }
 
-      .page-header__catalog-menu {
-        margin: 0 0 40px 0;
+      .page-header__navigation--index {
+        width: 100%;
+        order: 2;
+
+        .page-header__catalog-menu {
+          margin: 0 0 40px 0;
+          display: block;
+        }
+
+        .page-header__site-menu {
+          margin: 0 0 32px 0;
+          display: block;
+        }
       }
 
-      .page-header__site-menu {
-        margin: 0 0 32px 0;
+      .page-header__navigation--catalog {
+        width: 100%;
+        order: 2;
+
+        .page-header__catalog-menu {
+          margin: 0 0 40px 0;
+          display: block;
+        }
+
+        .page-header__site-menu {
+          margin: 0 0 32px 0;
+          display: block;
+        }
       }
 
       .page-header__link {
@@ -165,12 +203,6 @@
         &:active {
           opacity: 0.3;
         }
-      }
-
-      .page-header__navigation {
-        width: 100%;
-        display: block;
-        order: 2;
       }
 
       .page-header__icon {
@@ -285,8 +317,24 @@
   }
 }
 
-.page-header__navigation {
-  display: none;
+.page-header__navigation--index {
+  .page-header__catalog-menu {
+    display: none;
+  }
+
+  .page-header__site-menu {
+    display: none;
+  }
+}
+
+.page-header__navigation--catalog {
+  .page-header__catalog-menu {
+    display: block;
+  }
+
+  .page-header__site-menu {
+    display: none;
+  }
 }
 
 .page-header__fix {
@@ -384,17 +432,11 @@
 }
 
 .page-header__intro {
-  padding: 180px 0 185px;
   text-align: center;
   color: $white;
 
-  background-image: url("../img/intro-bg-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/intro-bg-desktop@2x.jpg");
-  }
 
   p {
     @include reset;
@@ -410,6 +452,16 @@
     &:last-of-type {
       @include text(400, 38px, 110%);
       font-style: italic;
+    }
+  }
+
+  &--index {
+    padding: 180px 0 185px;
+
+    background-image: url("../img/intro-bg-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/intro-bg-desktop@2x.jpg");
     }
   }
 }
