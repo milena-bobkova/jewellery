@@ -1,0 +1,152 @@
+.faq {
+  margin: 0 auto;
+  padding: 0 0 121px 0;
+  width: calc(100% - 198px);
+
+  h2 {
+    @include reset;
+
+    margin: 0 0 48px 0;
+    text-transform: initial;
+    letter-spacing: 0.03em;
+  }
+
+  @include tablet {
+    padding: 0 0 75px 0;
+    width: 100%;
+
+    h2 {
+      margin: 0 0 50px 0;
+    }
+  }
+
+  @include mobile {
+    padding: 0 0 60px 0;
+
+    h2 {
+      margin: 0 0 27px 0;
+    }
+  }
+}
+
+.faq__list {
+  @include list-reset;
+}
+
+.faq__item {
+  margin: -1px 0 0 0;
+  padding: 43px 50px 35px 44px;
+  border: 1px solid $brown;
+
+  &:first-of-type {
+    margin: 0;
+    padding: 43px 50px 42px 43px;
+  }
+
+  p {
+    @include reset;
+    @include text(400, 16px, 130%);
+
+    margin: 0 0 0 7px;
+
+    width: 59%;
+
+    text-align: left;
+    color: $dark;
+
+    @include tablet {
+      width: 92%;
+    }
+  }
+
+  @include tablet {
+    padding: 43px 48px 17px 44px;
+
+    &:first-of-type {
+      margin: -2px 0 0 0;
+      padding: 43px 48px 45px 43px;
+    }
+  }
+
+  @include mobile {
+    padding: 19px 22px 3px 24px;
+
+    &:first-of-type {
+      padding: 19px 22px 17px 24px;
+    }
+
+    p {
+      @include text(400, 14px, 145%);
+      margin: 0;
+      width: 90%;
+    }
+  }
+}
+
+.faq__title-wrap {
+  margin: 0 0 9px 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  h3 {
+    @include reset;
+    @include text(500, 18px, 130%);
+
+    color: $dark;
+  }
+
+  @include tablet {
+    margin: 0 0 27px 5px;
+  }
+
+  @include mobile {
+    margin: 0 0 15px 0;
+
+    h3 {
+      @include text(500, 16px, 140%);
+      width: 76%;
+      text-align: left;
+    }
+  }
+}
+
+.faq__button {
+  @include reset;
+
+  margin: 8px 0 0 0;
+  position: relative;
+  background-color: transparent;
+  border: none;
+
+  width: 15px;
+  height: 10px;
+
+  &::before {
+    @include pseudo;
+    top: 0;
+    right: 0;
+
+    width: 15px;
+    height: 10px;
+    background-image: url("../img/arrow-down-icon.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  @include tablet {
+    margin: 3px 0 0 0;
+    width: 23px;
+    height: 14px;
+
+    &::before {
+      width: 30px;
+      height: 20px;
+      background-image: url("../img/arrow-down-icon-tablet.svg");
+    }
+  }
+
+  @include mobile {
+    margin: 0;
+  }
+}

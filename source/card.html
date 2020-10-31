@@ -10,6 +10,35 @@
   <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font">
   <link rel="preload" href="fonts/Poppins-Regular.woff" as="font">
   <link href="css/style.min.css" rel="stylesheet">
+
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url("js/pixel-glass/preview/card-mobile.jpg");
+    }
+
+    /* Планшет */
+    @media (min-width: 768px) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url("js/pixel-glass/preview/card-tablet.jpg");
+      }
+    }
+
+    /* Десктоп */
+    @media (min-width: 1024px) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url("js/pixel-glass/preview/card-desktop.jpg");
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
+  <script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
+  <!-- // Pixel Glass -->
 </head>
 
 <body>

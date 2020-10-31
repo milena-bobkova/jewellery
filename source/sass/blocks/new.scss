@@ -1,0 +1,149 @@
+.new {
+  padding: 125px 0 115px;
+
+  @include tablet {
+    padding: 75px 0 65px;
+  }
+
+  @include mobile {
+    padding: 65px 0 55px;
+  }
+}
+
+.new h2 {
+  line-height: 100%;
+
+  @include mobile {
+    margin: 0 0 15px 0;
+  }
+}
+
+.new__arrow-wrap {
+  margin: 0 0 4px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include tablet {
+    margin: 0;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.new__arrow {
+  width: 36px;
+  height: 21px;
+}
+
+.new__link {
+  margin: 0 0 3px 0;
+
+  @include tablet {
+    margin: -2px 0 0 0;
+  }
+}
+
+.new__list {
+  @include list-reset;
+
+  display: flex;
+  justify-content: space-between;
+
+  @include tablet {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.new__item {
+  padding: 55px 30px 52px 0;
+
+  &:nth-of-type(4n) {
+    padding: 55px 0 52px;
+  }
+
+  @include tablet {
+    padding: 55px 30px 43px 0;
+
+    &:nth-of-type(2n) {
+      padding: 55px 0 43px;
+    }
+  }
+
+  @include mobile {
+    padding: 55px 30px 33px 0;
+
+    &:nth-of-type(2n) {
+      padding: 55px 0 33px;
+    }
+  }
+}
+
+.new__picture {
+  margin: 0 0 18px 0;
+
+  @include tablet {
+    margin: 0 0 15px 0;
+    width: 324px;
+    height: 340px;
+  }
+
+  @include mobile {
+    margin: 0 0 13px 0;
+    width: 130px;
+    height: 136px;
+  }
+}
+
+.new h3 {
+  @include reset;
+  @include text(500, 16px, 130%);
+  margin: 0 0 5px 0;
+  color: $dark;
+}
+
+.new span {
+  @include text(700, 14px, 130%);
+  color: $dark;
+}
+
+.new__pagination {
+  margin: 0 auto;
+  width: 48px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+
+  @include tablet {
+    width: 118px;
+  }
+
+  @include mobile {
+    width: 48px;
+  }
+}
+
+.new__pagination-link {
+  @include text(500, 16px, 130%);
+  margin: 0 12px 0 0;
+  color: $grey;
+
+  display: block;
+
+  &:last-of-type {
+    margin: 0;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus,
+  &:active {
+    color: $dark;
+  }
+}
