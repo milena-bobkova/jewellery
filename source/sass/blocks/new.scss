@@ -59,25 +59,25 @@
 }
 
 .new__item {
-  padding: 55px 30px 52px 0;
+  margin: 55px 30px 52px 0;
 
   &:nth-of-type(4n) {
-    padding: 55px 0 52px;
+    margin: 55px 0 52px;
   }
 
   @include tablet {
-    padding: 55px 30px 43px 0;
+    margin: 55px 30px 43px 0;
 
     &:nth-of-type(2n) {
-      padding: 55px 0 43px;
+      margin: 55px 0 43px;
     }
   }
 
   @include mobile {
-    padding: 55px 30px 33px 0;
+    margin: 55px 30px 33px 0;
 
     &:nth-of-type(2n) {
-      padding: 55px 0 33px;
+      margin: 55px 0 33px;
     }
   }
 }
@@ -99,24 +99,11 @@
 }
 
 .new h3 {
-  @include reset;
-  @include text(500, 16px, 130%);
   margin: 0 0 5px 0;
-  color: $dark;
-}
-
-.new span {
-  @include text(700, 14px, 130%);
-  color: $dark;
 }
 
 .new__pagination {
-  margin: 0 auto;
   width: 48px;
-  overflow: hidden;
-
-  display: flex;
-  justify-content: space-between;
 
   @include tablet {
     width: 118px;
@@ -124,26 +111,5 @@
 
   @include mobile {
     width: 48px;
-  }
-}
-
-.new__pagination-link {
-  @include text(500, 16px, 130%);
-  margin: 0 12px 0 0;
-  color: $grey;
-
-  display: block;
-
-  &:last-of-type {
-    margin: 0;
-  }
-
-  &:hover {
-    opacity: 0.7;
-  }
-
-  &:focus,
-  &:active {
-    color: $dark;
   }
 }

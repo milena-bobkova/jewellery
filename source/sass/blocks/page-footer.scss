@@ -34,8 +34,12 @@
 }
 
 .page-footer__sign-up-wrap {
-  margin: 0 2.3% 0 0;
+  margin: 0 2% 0 0;
   width: 42.8%;
+
+  &--catalog {
+    margin: 0 0.8% 0 0;
+  }
 
   @include tablet {
     margin: 0 0 48px 0;
@@ -65,6 +69,12 @@
     color: $grey;
   }
 
+  &--catalog {
+    p {
+      margin: 0 0 43px 0;
+    }
+  }
+
   @include tablet {
     h3 {
       margin: 0 0 8px 0;
@@ -89,6 +99,12 @@
       margin: 0 0 40px 0;
       line-height: 140%;
       width: 80%;
+    }
+
+    &--catalog {
+      h3 {
+        margin: 0 0 13px 0;
+      }
     }
   }
 }
@@ -161,8 +177,12 @@
 .page-footer__delivery {
   @include list-reset;
 
-  margin: 8px 0 0 0;
-  width: 15%;
+  margin: 7px 0 0 0;
+  width: 15.6%;
+
+  &--catalog {
+    width: 14.5%;
+  }
 
   @include tablet {
     width: 25%;
@@ -180,6 +200,10 @@
 
   margin: 8px 0 0 0;
   width: 11%;
+
+  &--catalog {
+    width: 11.4%;
+  }
 
   @include tablet {
     width: 18%;
@@ -260,25 +284,27 @@
 }
 
 .page-footer__svg {
-  &--fb {
-    width: 12px;
-    height: 21px;
-  }
+  @include mobile {
+    &--fb {
+      width: 12px;
+      height: 21px;
+    }
 
-  &--ig {
-    margin: 0 0 0 -4px;
-    width: 20px;
-    height: 21px;
-  }
+    &--ig {
+      margin: 0 0 0 -4px;
+      width: 20px;
+      height: 21px;
+    }
 
-  &--pt {
-    width: 20px;
-    height: 21px;
-  }
+    &--pt {
+      width: 20px;
+      height: 21px;
+    }
 
-  &--tw {
-    margin: 3px 0 0 1px;
-    width: 20px;
-    height: 18px;
+    &--tw {
+      margin: 3px 0 0 1px;
+      width: 20px;
+      height: 18px;
+    }
   }
 }

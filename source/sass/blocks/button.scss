@@ -1,0 +1,13 @@
+.button {
+  @include reset;
+  @include text(500, 16px, 130%);
+
+  padding: 24px 0;
+
+  border: none;
+
+  background-color: $brown;
+  color: $white;
+  box-sizing: border-box;
+  text-align: center;
+}
