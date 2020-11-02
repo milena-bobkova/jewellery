@@ -34,21 +34,39 @@
   }
 }
 
+.catalof-filter-overlay {
+  display: none;
+
+  position: fixed;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+
+  background-color: #f0eae4;
+}
+
 .catalog__filter {
   width: 21.37%;
 
   @include tablet {
     &--opened {
       position: fixed;
-      z-index: 2;
+      top: 50px;
 
-      height: 100vh;
+      margin: 0 auto;
+
+      width: 442px;
+
+      left: 0;
+      right: 0;
+      z-index: 3;
+
+      background-color: $white;
 
       display: block;
-
-      .catalog__filter-close {
-        display: block;
-      }
     }
 
     &--closed {
@@ -59,6 +77,16 @@
 
 .catalog__filter-close {
   display: none;
+
+  @include tablet {
+    position: absolute;
+    top: 0;
+    right: -22px;
+    display: block;
+
+    background-color: transparent;
+    border: none;
+  }
 }
 
 .catalog__filter-fix {
@@ -68,6 +96,10 @@
 
 .catalog__filter-wrap {
   margin: 0 0 35px 0;
+
+  @include tablet {
+    margin: 0 0 40px 0;
+  }
 }
 
 .catalog__filter-form {
@@ -83,6 +115,12 @@
   h3 {
     @include reset;
     @include text(500, 16px, 130%);
+  }
+
+  @include tablet {
+    h3 {
+      @include text(500, 18px, 130%);
+    }
   }
 }
 
@@ -105,6 +143,17 @@
     background-repeat: no-repeat;
     background-position: right;
   }
+
+  @include tablet {
+    width: 23px;
+    height: 12px;
+
+    &::before {
+      width: 23px;
+      height: 12px;
+      background-image: url("../img/arrow-down-icon-tablet.svg");
+    }
+  }
 }
 
 .catalog__filter-product {
@@ -115,10 +164,29 @@
   &:last-of-type {
     padding: 24px 10% 18px;
   }
+
+  @include tablet {
+    margin: 0;
+    padding: 35px 9% 10px;
+    border: none;
+    border-bottom: 1px solid $brown;
+
+    &:first-of-type {
+      padding: 52px 9% 0;
+    }
+
+    &:last-of-type {
+      padding: 35px 9% 33px;
+    }
+  }
 }
 
 .catalog__filter-field {
   padding: 0 10px 26px;
+
+  @include tablet {
+    padding: 0 10px 35px;
+  }
 }
 
 .catalog__filter-item {
@@ -131,6 +199,16 @@
 
   &:last-of-type {
     margin: 0;
+  }
+
+  @include tablet {
+    @include text(500, 16px, 130%);
+
+    margin: 0 0 18.5px 0;
+
+    span {
+      padding: 0 0 0 16px;
+    }
   }
 }
 
@@ -149,6 +227,14 @@
     border: 1px solid $brown;
     box-sizing: border-box;
   }
+
+  @include tablet {
+    &::before {
+      top: -10px;
+      width: 18px;
+      height: 18px;
+    }
+  }
 }
 
 .catalog__filter-item input:checked + .catalog__filter__check-field::before {
@@ -157,6 +243,10 @@
 
 .catalog__filter-range {
   padding: 3px 0 0 0;
+
+  @include tablet {
+    padding: 10px 0 0 0;
+  }
 }
 
 .catalog__filter-controls {
@@ -167,6 +257,10 @@
   width: 200px;
   height: 1px;
   background-color: #f0eae4;
+
+  @include tablet {
+    width: 304px;
+  }
 }
 
 .catalog__filter-bar {
@@ -176,12 +270,21 @@
   width: 100px;
   height: 1px;
   background-color: $brown;
+
+  @include tablet {
+    left: 75px;
+    width: 158px;
+  }
 }
 
 .catalog__filter-price-controls {
   padding: 12px 0 0 37px;
   display: flex;
   justify-content: space-between;
+
+  @include tablet {
+    padding: 16px 0 0 45px;
+  }
 }
 
 .catalog__filter-price {
@@ -194,6 +297,14 @@
 
     border: none;
     background-color: transparent;
+  }
+
+  @include tablet {
+    @include text(500, 16px, 130%);
+
+    input {
+      width: 100px;
+    }
   }
 }
 
@@ -215,12 +326,30 @@
   &--max {
     left: 150px;
   }
+
+  @include tablet {
+    width: 18px;
+    height: 18px;
+
+    &--min {
+      left: 55px;
+    }
+
+    &--max {
+      left: 230px;
+    }
+  }
 }
 
 .catalog__filter-submit {
   width: 100%;
   text-align: center;
   letter-spacing: 0.05em;
+
+  @include tablet {
+    width: 362px;
+    margin: 0 auto 25px;
+  }
 }
 
 .catalog__filter-clear {
@@ -228,9 +357,8 @@
 
   @include tablet {
     display: block;
-    background-color: $white;
-    color: $dark;
-    border: 1px solid $brown;
+    width: 362px;
+    margin: 0 auto 40px;
   }
 }
 

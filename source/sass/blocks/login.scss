@@ -1,0 +1,186 @@
+.login-overlay {
+  display: none;
+
+  position: fixed;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+
+  background-color: $white;
+}
+
+.login {
+  margin: 0 auto;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+
+  width: 430px;
+
+  background-color: $bg-grey;
+  box-shadow: 0 5px 32px rgba(226, 221, 215, 0.24);
+
+  @include tablet {
+    top: 80px;
+    width: 442px;
+  }
+
+  @include mobile {
+    top: 50px;
+    width: 270px;
+  }
+}
+
+.login__bg-wrap {
+  position: relative;
+  height: 138px;
+
+  background: url("../img/login-bg-desktop@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/login-bg-desktop@2x.jpg");
+  }
+
+  @include tablet {
+    background: url("../img/login-bg-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/login-bg-tablet@2x.jpg");
+    }
+  }
+
+  @include mobile {
+    height: 84px;
+
+    background: url("../img/login-bg-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/login-bg-mobile@2x.jpg");
+    }
+  }
+}
+
+.login__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 14px;
+  height: 14px;
+
+  border: none;
+  background-color: transparent;
+}
+
+.login__close-icon {
+  @include tablet {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.login__wrap {
+  padding: 50px 45px 53px;
+
+  h2 {
+    @include reset;
+    @include text(700, 34px, 130%);
+
+    color: $dark;
+
+    margin: 0 0 24px 0;
+
+    width: 100%;
+
+    font-family: "CormorantGaramond", "PTSerif", serif;
+    text-align: center;
+  }
+
+  @include tablet {
+    padding: 40px 51px 45px;
+
+    h2 {
+      @include text(700, 24px, 130%);
+
+      margin: 0 0 16px 0;
+    }
+  }
+
+  @include mobile {
+    padding: 38px 15px 43px;
+  }
+}
+
+.login__form {
+  input {
+    @include text(500, 14px, 21px);
+
+    margin: 0 0 25px 0;
+    padding: 9px 0;
+
+    font-family: "Poppins", "Arial", sans-serif;
+    color: $grey;
+
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $dark;
+  }
+
+  @include mobile {
+    input {
+      margin: 0 0 20px 0;
+    }
+  }
+}
+
+.login__password-wrap {
+  margin: 0 0 45px 0;
+
+  input {
+    margin: 0 0 4px 0;
+  }
+
+  @include mobile {
+    margin: 0 0 35px 0;
+  }
+}
+
+.login__forgot {
+  @include text(500, 12px, 18px);
+
+  display: block;
+
+  color: $grey;
+  text-align: right;
+}
+
+.login__submit {
+  margin: 0 0 15px 0;
+  width: 100%;
+}
+
+.login__info {
+  text-align: center;
+
+  p {
+    @include reset;
+    @include text(500, 14px, 21px);
+
+    color: $grey;
+  }
+}
+
+.login__sign-up {
+  @include text(500, 14px, 21px);
+
+  display: inline-block;
+  vertical-align: top;
+
+  color: $dark;
+}

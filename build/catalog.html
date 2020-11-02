@@ -17,14 +17,14 @@
       background-repeat: no-repeat;
       background-position: 50% 0;
       /* По умолчанию показывается мобильный макет */
-      background-image: url("js/pixel-glass/preview/catalog-mobile.jpg");
+      background-image: url("js/pixel-glass/preview/filter-mobile.jpg");
     }
 
     /* Планшет */
     @media (min-width: 768px) {
       HTML {
         /* Планшетный макет */
-        background-image: url("js/pixel-glass/preview/catalog-tablet.jpg");
+        background-image: url("js/pixel-glass/preview/filter-tablet.jpg");
       }
     }
 
@@ -87,9 +87,14 @@
   </header>
   <main class="page-main catalog">
     <a href="filter.html" class="catalog__filter-btn button">Filter</a>
+    <div class="catalog__filter-overlay"></div>
     <section class="catalog__filter catalog__filter--closed">
       <h2 class="visually-hidden">Filter</h2>
-      <button class="catalog__filter-close" type="button" aria-label="Close filter"></button>
+      <button class="catalog__filter-close" type="button" aria-label="Close filter">
+        <svg class="catalog__filter-close-icon" width="32" height="32">
+          <use xlink:href="img/sprite.svg#filter-close-icon"></use>
+        </svg>
+      </button>
       <form class="catalog__filter-form">
         <div class="catalog__filter-wrap">
           <div class="catalog__filter-product">
@@ -163,7 +168,7 @@
           </div>
         </div>
         <button class="catalog__filter-submit button" type="submit">Apply</button>
-        <button class="catalog__filter-clear button" type="submit">Clear all</button>
+        <button class="catalog__filter-clear button button--white" type="submit">Clear all</button>
       </form>
     </section>
     <section class="catalog__products">

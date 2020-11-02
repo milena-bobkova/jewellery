@@ -1,0 +1,224 @@
+.card {
+  margin: 0 auto;
+  padding: 70px 0 10px;
+  width: calc(100% - 40px);
+  max-width: 1170px;
+
+  @include tablet {
+    padding: 20px 0 10px;
+    width: calc(100% - 90px);
+  }
+
+  @include mobile {
+    padding: 0;
+    width: calc(100% - 30px);
+  }
+}
+
+.card__product {
+  display: flex;
+  justify-content: space-between;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.card__photos {
+  padding: 10px 0 0 0;
+  width: 51.3%;
+  height: 435px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include tablet {
+    width: 47.06%;
+    height: auto;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  @include mobile {
+    position: relative;
+    margin: 0 0 40px 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.card__photo-wrap {
+  @include tablet {
+    &--big {
+      order: -1;
+    }
+  }
+
+  @include mobile {
+    display: none;
+
+    &--big {
+      display: block;
+    }
+  }
+}
+
+.card__photo {
+  display: block;
+
+  &--big {
+    margin: 0 0 0 30px;
+  }
+
+  @include tablet {
+    width: 97px;
+    height: 129px;
+
+    &--big {
+      margin: 0 0 14px 0;
+
+      width: 319px;
+      height: 286px;
+    }
+  }
+
+  @include mobile {
+    &--big {
+      margin: 0;
+
+      width: 290px;
+      height: 260px;
+    }
+  }
+}
+
+.card__photo-num {
+  display: none;
+
+  @include mobile {
+    @include text(500, 14px, 18.2px);
+    position: absolute;
+    bottom: 6px;
+    left: 128px;
+    display: block;
+  }
+}
+
+.card__info {
+  margin: 0 8.6% 0 0;
+
+  width: 31.63%;
+  text-align: left;
+
+  h3 {
+    @include reset;
+    @include text(700, 34px, 130%);
+
+    margin: 0 0 12px 0;
+
+    font-family: "CormorantGaramond", "PTSerif", serif;
+    color: $dark;
+    text-transform: capitalize;
+  }
+
+  p {
+    @include reset;
+    @include text(400, 26px, 33.8px);
+
+    margin: 0 0 38px 0;
+
+    color: $dark;
+  }
+
+  @include tablet {
+    margin: 0;
+    width: 47.06%;
+  }
+
+  @include mobile {
+    width: 100%;
+
+    p {
+      margin: 0 0 28px 0;
+    }
+  }
+}
+
+.card__info-list {
+  @include reset;
+
+  margin: 0 0 22px 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  &:first-of-type {
+    margin: 0 0 32px 0;
+    justify-content: flex-start;
+  }
+}
+
+.card__info-list-dt {
+  &--big {
+    @include text(500, 16px, 130%);
+
+    margin: 0 35px 0 0;
+    color: $grey;
+
+    @include mobile {
+      margin: 0 38px 0 0;
+    }
+  }
+
+  &--small {
+    @include text(500, 14px, 130%);
+  }
+}
+
+.card__info-list-dd {
+  @include reset;
+
+  &--big {
+    @include text(500, 16px, 130%);
+  }
+
+  &--small {
+    @include text(500, 14px, 130%);
+  }
+}
+
+.card__button {
+  margin: 62px 0 15px 0;
+  width: 100%;
+
+  @include mobile {
+    margin: 52px 0 12px 0;
+  }
+}
+
+.card__conditions {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    @include reset;
+    @include text(500, 14px, 130%);
+
+    color: $grey;
+  }
+
+  @include tablet {
+    p {
+      @include text(500, 12px, 15.6px);
+    }
+  }
+
+  @include mobile {
+    p {
+      width: 24%;
+      text-align: center;
+    }
+  }
+}

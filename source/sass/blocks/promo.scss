@@ -1,31 +1,53 @@
-.new {
-  padding: 125px 0 115px;
+.promo {
+  padding: 120px 0 115px;
+
+  h2 {
+    line-height: 100%;
+  }
 
   @include tablet {
-    padding: 75px 0 65px;
+    padding: 70px 0 65px;
+
+    &--card {
+      padding: 70px 0 65px;
+    }
   }
 
   @include mobile {
-    padding: 65px 0 55px;
+    padding: 60px 0 55px;
+
+    &--card {
+      padding: 58px 0 63px;
+    }
   }
 }
 
-.new h2 {
-  line-height: 100%;
+.promo__link {
+  margin: 0 0 3px 0;
+
+  &--card {
+    margin: -5px 0 10px 0;
+  }
+
+  @include tablet {
+    margin: -2px 0 0 0;
+  }
 
   @include mobile {
-    margin: 0 0 15px 0;
+    &--card {
+      margin: 20px 0 -10px 0;
+    }
   }
 }
 
-.new__arrow-wrap {
-  margin: 0 0 4px 0;
+.promo__arrow-wrap {
+  margin: -7px 0 6px 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 
   @include tablet {
-    margin: 0;
+    margin: -5px 0 0 0;
   }
 
   @include mobile {
@@ -33,20 +55,12 @@
   }
 }
 
-.new__arrow {
+.promo__arrow {
   width: 36px;
   height: 21px;
 }
 
-.new__link {
-  margin: 0 0 3px 0;
-
-  @include tablet {
-    margin: -2px 0 0 0;
-  }
-}
-
-.new__list {
+.promo__list {
   @include list-reset;
 
   display: flex;
@@ -58,7 +72,7 @@
   }
 }
 
-.new__item {
+.promo__item {
   margin: 55px 30px 52px 0;
 
   &:nth-of-type(4n) {
@@ -82,7 +96,7 @@
   }
 }
 
-.new__picture {
+.promo__picture {
   margin: 0 0 18px 0;
 
   @include tablet {
@@ -92,17 +106,17 @@
   }
 
   @include mobile {
-    margin: 0 0 13px 0;
+    margin: 0 0 12px 0;
     width: 130px;
     height: 136px;
   }
 }
 
-.new h3 {
+.promo h3 {
   margin: 0 0 5px 0;
 }
 
-.new__pagination {
+.promo__pagination {
   width: 48px;
 
   @include tablet {

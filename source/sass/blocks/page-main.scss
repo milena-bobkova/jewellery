@@ -26,6 +26,14 @@
     color: $dark;
     text-transform: capitalize;
   }
+
+  &--index {
+    h2 {
+      @include mobile {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
 }
 
 .page-main__link {
