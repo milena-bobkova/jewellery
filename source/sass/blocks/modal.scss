@@ -1,0 +1,29 @@
+.modal {
+  display: none;
+
+  position: fixed;
+  /*
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  */
+
+  &--filter {
+    display: block;
+  }
+
+  &--show {
+    display: block;
+  }
+
+  @include tablet {
+    &--filter {
+      display: none;
+    }
+  }
+}
+
+.modal__fix {
+  position: fixed;
+  overflow-y: hidden;
+}

@@ -34,31 +34,18 @@
   }
 }
 
-.catalof-filter-overlay {
-  display: none;
-
-  position: fixed;
-  overflow: auto;
-  left: 0;
-  top: 0;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-
-  background-color: #f0eae4;
-}
-
 .catalog__filter {
   width: 21.37%;
 
   @include tablet {
     &--opened {
       position: fixed;
-      top: 50px;
+      top: 66px;
 
       margin: 0 auto;
 
       width: 442px;
+      box-sizing: border-box;
 
       left: 0;
       right: 0;
@@ -73,6 +60,14 @@
       display: none;
     }
   }
+
+  @include mobile {
+    &--opened {
+      top: 76px;
+
+      width: 280px;
+    }
+  }
 }
 
 .catalog__filter-close {
@@ -80,12 +75,16 @@
 
   @include tablet {
     position: absolute;
-    top: 0;
+    top: -18px;
     right: -22px;
     display: block;
 
     background-color: transparent;
     border: none;
+  }
+
+  @include mobile {
+    right: -11px;
   }
 }
 
@@ -99,6 +98,10 @@
 
   @include tablet {
     margin: 0 0 40px 0;
+  }
+
+  @include mobile {
+    margin: 0 0 30px 0;
   }
 }
 
@@ -172,11 +175,23 @@
     border-bottom: 1px solid $brown;
 
     &:first-of-type {
-      padding: 52px 9% 0;
+      padding: 35px 9% 0;
     }
 
     &:last-of-type {
       padding: 35px 9% 33px;
+    }
+  }
+
+  @include mobile {
+    padding: 25px 9% 0;
+
+    &:first-of-type {
+      padding: 25px 9% 0;
+    }
+
+    &:last-of-type {
+      padding: 25px 9% 25px;
     }
   }
 }
@@ -186,6 +201,10 @@
 
   @include tablet {
     padding: 0 10px 35px;
+  }
+
+  @include mobile {
+    padding: 0 10px 25px;
   }
 }
 
@@ -207,7 +226,7 @@
     margin: 0 0 18.5px 0;
 
     span {
-      padding: 0 0 0 16px;
+      padding: 0 0 0 15px;
     }
   }
 }
@@ -261,6 +280,10 @@
   @include tablet {
     width: 304px;
   }
+
+  @include mobile {
+    width: 250px;
+  }
 }
 
 .catalog__filter-bar {
@@ -275,6 +298,11 @@
     left: 75px;
     width: 158px;
   }
+
+  @include mobile {
+    left: 50px;
+    width: 120px;
+  }
 }
 
 .catalog__filter-price-controls {
@@ -284,6 +312,10 @@
 
   @include tablet {
     padding: 16px 0 0 45px;
+  }
+
+  @include tablet {
+    padding: 16px 0 0 20px;
   }
 }
 
@@ -304,6 +336,12 @@
 
     input {
       width: 100px;
+    }
+  }
+
+  @include mobile {
+    input {
+      width: 30px;
     }
   }
 }
@@ -339,6 +377,16 @@
       left: 230px;
     }
   }
+
+  @include mobile {
+    &--min {
+      left: 30px;
+    }
+
+    &--max {
+      left: 167px;
+    }
+  }
 }
 
 .catalog__filter-submit {
@@ -350,6 +398,11 @@
     width: 362px;
     margin: 0 auto 25px;
   }
+
+  @include mobile {
+    width: 230px;
+    margin: 0 auto 20px;
+  }
 }
 
 .catalog__filter-clear {
@@ -359,6 +412,11 @@
     display: block;
     width: 362px;
     margin: 0 auto 40px;
+  }
+
+  @include mobile {
+    width: 230px;
+    margin: 0 auto 20px;
   }
 }
 

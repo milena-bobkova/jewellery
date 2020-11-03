@@ -17,14 +17,14 @@
       background-repeat: no-repeat;
       background-position: 50% 0;
       /* По умолчанию показывается мобильный макет */
-      background-image: url("js/pixel-glass/preview/card-mobile.jpg");
+      background-image: url("js/pixel-glass/preview/add-mobile.jpg");
     }
 
     /* Планшет */
     @media (min-width: 768px) {
       HTML {
         /* Планшетный макет */
-        background-image: url("js/pixel-glass/preview/card-tablet.jpg");
+        background-image: url("js/pixel-glass/preview/add-tablet.jpg");
       }
     }
 
@@ -32,7 +32,7 @@
     @media (min-width: 1024px) {
       HTML {
         /* Десктопный макет */
-        background-image: url("js/pixel-glass/preview/card-desktop.jpg");
+        background-image: url("js/pixel-glass/preview/add-desktop.jpg");
       }
     }
   </style>
@@ -56,7 +56,7 @@
         <a href="index.html" class="page-header__logo page-header__logo--catalog">
           <img src="img/logo.svg" width="66" height="66" alt="Online store logo">
         </a>
-        <a href="#" class="page-header__login">Login</a>
+        <a href="#" class="page-header__login login-open">Login</a>
         <nav class="page-header__navigation page-header__navigation--catalog">
           <div class="page-header__catalog-menu">
             <a href="#" class="page-header__link page-header__link--catalog">What’s new</a>
@@ -169,7 +169,7 @@
           <dt class="card__info-list-dt card__info-list-dt--small">Size</dt>
           <dd class="card__info-list-dd card__info-list-dd--small">18” / 20”</dd>
         </dl>
-        <a class="card__button button">Add to cart</a>
+        <a class="card__button button modal-open">Add to cart</a>
         <div class="card__conditions">
           <p>14 Day Returns</p>
           <p>2-Year Warranty</p>
@@ -363,58 +363,66 @@
     </div>
   </footer>
 
-  <section class="madal-add modal">
-    <button type="button" class="modal__close" aria-label="Close"></button>
-    <h2>The item was added to your cart</h2>
-    <div class="modal-add__product">
-      <picture>
-        <source type="image/webp" media="(max-width: 767px)"
-          srcset="img/necklace-detail-add-to-cart-mobilep@1x.webp 1x, img/necklace-detail-add-to-cart-mobile@1x.webp 2x">
-        <source type="image/webp" media="(max-width: 1023px)"
-          srcset="img/necklace-detail-add-to-cart-tabletp@1x.webp 1x, img/necklace-detail-add-to-cart-tablet@1x.webp 2x">
-        <source type="image/webp"
-          srcset="img/necklace-detail-add-to-cart-desktop@1x.webp 1x, img/necklace-detail-add-to-cart-desktop@1x.webp 2x">
-        <!-- 1x: 70px; 2x: 140px -->
-        <source media="(max-width: 767px)"
-          srcset="img/necklace-detail-add-to-cart-mobile@1x.jpg 1x, img/necklace-detail-add-to-cart-mobile@1x.jpg 2x">
-        <!-- 1x: 88px; 2x: 176px -->
-        <source media="(max-width: 1023px)"
-          srcset="img/necklace-detail-add-to-cart-tablet@1x.jpg 1x, img/necklace-detail-add-to-cart-tablet@1x.jpg 2x">
-        <!-- 1x: 84px; 2x: 168px -->
-        <img class="modal-add__picture" src="img/necklace-detail-add-to-cart-desktop@1x.jpg"
-          srcset="img/necklace-detail-add-to-cart-desktop@2x.jpg 2x" width="84" height="79" alt="necklace">
-      </picture>
-      <div class="modal-add__info">
-        <h3>Gold Necklace</h3>
-        <p>$ 115</p>
+  <div class="overlay overlay--card"></div>
+  <section class="add modal">
+    <div class="add__wrap">
+      <button type="button" class="add__close modal-close" aria-label="Close">
+        <svg class="add__close-icon" width="14" height="14">
+          <use xlink:href="img/sprite.svg#modal-close-icon"></use>
+        </svg>
+      </button>
+      <h2>The item was added to&nbsp;your cart</h2>
+      <div class="add__product">
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)"
+            srcset="img/necklace-detail-add-to-cart-mobile@1x.webp 1x, img/necklace-detail-add-to-cart-mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1023px)"
+            srcset="img/necklace-detail-add-to-cart-tablet@1x.webp 1x, img/necklace-detail-add-to-cart-tablet@2x.webp 2x">
+          <source type="image/webp"
+            srcset="img/necklace-detail-add-to-cart-desktop@1x.webp 1x, img/necklace-detail-add-to-cart-desktop@2x.webp 2x">
+          <!-- 1x: 70px; 2x: 140px -->
+          <source media="(max-width: 767px)"
+            srcset="img/necklace-detail-add-to-cart-mobile@1x.jpg 1x, img/necklace-detail-add-to-cart-mobile@2x.jpg 2x">
+          <!-- 1x: 88px; 2x: 176px -->
+          <source media="(max-width: 1023px)"
+            srcset="img/necklace-detail-add-to-cart-tablet@1x.jpg 1x, img/necklace-detail-add-to-cart-tablet@2x.jpg 2x">
+          <!-- 1x: 84px; 2x: 168px -->
+          <img class="add__picture" src="img/necklace-detail-add-to-cart-desktop@1x.jpg"
+            srcset="img/necklace-detail-add-to-cart-desktop@2x.jpg 2x" width="84" height="79" alt="necklace">
+        </picture>
+        <div class="add__info">
+          <h3>Gold Necklace</h3>
+          <p>$ 115</p>
+        </div>
+        <form class="add__quantity">
+          <button class="add__button" type="button" aria-label="Increase">
+            <svg class="add__icon add__icon--plus" width="14" height="14">
+              <use xlink:href="img/sprite.svg#plus-icon"></use>
+            </svg>
+          </button>
+          <label>
+            <input type="text" name="duration" value="1" id="num-duration">
+          </label>
+          <button class="add__button" type="button" aria-label="Reduce">
+            <svg class="modal-add__icon modal-add__icon--minus" width="14" height="2">
+              <use xlink:href="img/sprite.svg#minus-icon"></use>
+            </svg>
+          </button>
+        </form>
       </div>
-      <div class="modal-add__quantity">
-        <button class="modal-add__button" type="button" aria-label="Increase">
-          <svg class="modal-add__icon modal-add__icon--plus" width="14" height="14">
-            <use xlink:href="img/sprite.svg#plus-icon"></use>
-          </svg>
-        </button>
-        <label>
-          <input class="add-plan__form-input" type="text" name="duration" value="1" id="num-duration">
-        </label>
-        <button class="modal-add__button" type="button" aria-label="Reduce">
-          <svg class="modal-add__icon modal-add__icon--minus" width="14" height="2">
-            <use xlink:href="img/sprite.svg#minus-icon"></use>
-          </svg>
-        </button>
+      <div class="add__text">
+        <p>You have 1 item in the cart</p>
+        <span>Cart subtotal: $ 115</span>
       </div>
-    </div>
-    <div class="modal-add__text">
-      <p>You have 1 item in the cart</p>
-      <p>Cart subtotal: $ 115</p>
-    </div>
-    <div class="modal-add__links">
-      <a href="catalog.html" class="modal-add__catalog-link button button--white">Continue shopping</a>
-      <a href="cart.html" class="modal-add__cart-link button">Checkout</a>
+      <div class="add__links">
+        <a href="catalog.html" class="add__link add__link--catalog button button--white">Continue shopping</a>
+        <a href="cart.html" class="add__link button">Checkout</a>
+      </div>
     </div>
   </section>
 
   <script src="js/main.js"></script>
+  <script src="js/modal.js"></script>
 </body>
 
 </html>

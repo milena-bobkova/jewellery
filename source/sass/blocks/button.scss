@@ -2,20 +2,19 @@
   @include reset;
   @include text(500, 16px, 130%);
 
-  padding: 24px 0;
+  padding: 23px 0;
 
   display: block;
-
-  border: none;
 
   background-color: $brown;
   color: $white;
   box-sizing: border-box;
   text-align: center;
+  text-transform: capitalize;
+  border: 1px solid $brown;
 
   &--white {
     background-color: $white;
     color: $dark;
-    border: 1px solid $brown;
   }
 }

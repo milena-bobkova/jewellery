@@ -1,0 +1,238 @@
+.add {
+  top: 372px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 47px 0 55px;
+
+  width: 500px;
+
+  background-color: $white;
+  box-sizing: border-box;
+
+  &::before {
+    @include pseudo;
+    top: 246px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #f6f5f4;
+  }
+
+  @include tablet {
+    padding: 47px 0 55px;
+    top: 258px;
+
+    width: 502px;
+  }
+
+  @include mobile {
+    padding: 40px 0 45px;
+    top: 117px;
+
+    width: 290px;
+
+    &::before {
+      top: 222px;
+    }
+  }
+}
+
+.add__wrap {
+  width: calc(100% - 68px);
+  margin: 0 33px 0 35px;
+
+  h2 {
+    @include reset;
+    @include text(700, 26px, 130%);
+    font-family: "CormorantGaramond", "PTSerif", serif;
+
+    margin: 0 0 42px 0;
+
+    text-align: center;
+  }
+
+  @include tablet {
+    width: calc(100% - 60px);
+    margin: 0 auto;
+  }
+
+  @include mobile {
+    width: calc(100% - 30px);
+
+    h2 {
+      @include text(700, 24px, 120%);
+
+      margin: 0 0 30px 0;
+    }
+  }
+}
+
+.add__close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+
+  width: 14px;
+  height: 14px;
+
+  border: none;
+  background-color: transparent;
+
+  @include mobile {
+    top: 15px;
+    right: 20px;
+  }
+}
+
+.add__product {
+  margin: 0 0 55px 0;
+  display: flex;
+
+  @include mobile {
+    margin: 0 0 51px 0;
+  }
+}
+
+.add__picture {
+  margin: 5px 0 0 0;
+  display: block;
+
+  @include tablet {
+    width: 88px;
+  }
+
+  @include mobile {
+    margin: 2px 0 0 0;
+    width: 70px;
+    height: 63px;
+  }
+}
+
+.add__info {
+  margin: 0 0 0 20px;
+  flex-grow: 1;
+
+  h3 {
+    @include reset;
+    @include text(700, 18px, 130%);
+    font-family: "CormorantGaramond", "PTSerif", serif;
+
+    margin: 0 0 9px 0;
+  }
+
+  p {
+    @include reset;
+    @include text(400, 18px, 130%);
+  }
+
+  @include mobile {
+    margin: 0 0 0 15px;
+
+    h3 {
+      @include text(700, 16px, 130%);
+
+      margin: 0 0 5px 0;
+    }
+
+    p {
+      @include text(400, 16px, 130%);
+    }
+  }
+}
+
+.add__quantity {
+  margin: 0 0 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  input {
+    @include reset;
+    @include text(400, 18px, 130%);
+    font-family: inherit;
+
+    width: 14px;
+
+    border: none;
+    text-align: center;
+  }
+
+  @include mobile {
+    margin: 3px 0 0 0;
+
+    input {
+      @include text(400, 16px, 130%);
+    }
+  }
+}
+
+.add__button {
+  @include reset;
+
+  width: 14px;
+
+  border: none;
+  background-color: transparent;
+}
+
+.add__text {
+  margin: 0 0 37px 0;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    @include reset;
+    @include text(400, 14px, 130%);
+
+    color: $dark;
+  }
+
+  span {
+    @include text(500, 14px, 130%);
+
+    color: $dark;
+  }
+
+  @include mobile {
+    margin: 0 0 30px 0;
+    flex-direction: column;
+
+    p {
+      @include text(400, 12px, 130%);
+
+      margin: 0 0 15px 0;
+    }
+
+    span {
+      @include text(500, 12px, 130%);
+    }
+  }
+}
+
+.add__links {
+  margin: 0 2px 0 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.add__link {
+  width: 200px;
+
+  @include tablet {
+    width: 206px;
+  }
+
+  @include mobile {
+    width: 100%;
+
+    &--catalog {
+      margin: 0 0 20px 0;
+    }
+  }
+}

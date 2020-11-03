@@ -42,7 +42,7 @@
 </head>
 
 <body>
-  <header class="page-header  page-header--closed">
+  <header class="page-header page-header--closed">
     <div class="page-header__container">
       <div class="page-header__wrap page-header__wrap--catalog">
         <button type="button" class="page-header__toggle">
@@ -56,7 +56,7 @@
         <a href="index.html" class="page-header__logo page-header__logo--catalog">
           <img src="img/logo.svg" width="66" height="66" alt="Online store logo">
         </a>
-        <a href="#" class="page-header__login">Login</a>
+        <a href="#" class="page-header__login login-open">Login</a>
         <nav class="page-header__navigation page-header__navigation--catalog">
           <div class="page-header__catalog-menu">
             <a href="#" class="page-header__link page-header__link--catalog">What’s new</a>
@@ -86,11 +86,11 @@
     </div>
   </header>
   <main class="page-main catalog">
-    <a href="filter.html" class="catalog__filter-btn button">Filter</a>
-    <div class="catalog__filter-overlay"></div>
+    <a href="filter.html" class="catalog__filter-btn button modal-open">Filter</a>
+    <div class="overlay overlay--filter"></div>
     <section class="catalog__filter catalog__filter--closed">
       <h2 class="visually-hidden">Filter</h2>
-      <button class="catalog__filter-close" type="button" aria-label="Close filter">
+      <button class="catalog__filter-close modal-close" type="button" aria-label="Close filter">
         <svg class="catalog__filter-close-icon" width="32" height="32">
           <use xlink:href="img/sprite.svg#filter-close-icon"></use>
         </svg>
