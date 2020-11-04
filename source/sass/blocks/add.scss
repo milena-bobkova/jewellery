@@ -1,8 +1,4 @@
 .add {
-  top: 372px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
   padding: 47px 0 55px;
 
   width: 500px;
@@ -21,14 +17,12 @@
 
   @include tablet {
     padding: 47px 0 55px;
-    top: 258px;
 
     width: 502px;
   }
 
   @include mobile {
     padding: 40px 0 45px;
-    top: 117px;
 
     width: 290px;
 
@@ -69,6 +63,8 @@
 }
 
 .add__close {
+  @include reset;
+
   position: absolute;
   top: 20px;
   right: 25px;

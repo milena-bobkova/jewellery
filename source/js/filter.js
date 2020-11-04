@@ -2,33 +2,37 @@
 
 (function () {
 
-  var filter = document.querySelector('.catalog__filter');
-  var filterToggle = document.querySelector('.catalog__filter-btn');
+  var filterClear = document.querySelector('.catalog__filter-clear');
+  var form = document.querySelector('.catalog__filter-form');
+  var inputs = document.querySelectorAll('[name=filter]');
 
-  var closeFilter = function () {
-    filter.classList.add('catalog__filter--closed');
-    filter.classList.remove('catalog__filter--opened');
-    document.body.classList.remove('catalog__filter-fix');
-  };
+  var clearForm = function (button, form) {
+    if (button !== null && form !== null && form.childNodes.length > 0 && inputs.length > 0) {
+      button.addEventListener('click', function () {
+        form.reset();
 
-  var openFilter = function () {
-    filter.classList.remove('catalog__filter--closed');
-    filter.classList.add('catalog__filter--opened');
-    document.body.classList.add('catalog__filter-fix');
-  };
+        for (var i = 0; i < inputs.length; i++) {
+          var fieldType = inputs[i].type.toLowerCase();
 
-  var toggleFilterClickHandler = function (evt) {
-    if (filter !== null && filter.childNodes.length > 0) {
-      evt.preventDefault();
-      if (filter.classList.contains('catalog__filter--closed')) {
-        openFilter();
-      } else {
-        closeFilter();
-      }
+          switch (fieldType) {
+            case 'number':
+              inputs[i].value === "";
+              break;
+
+            case 'checkbox':
+              if (inputs[i].checked) {
+                inputs[i].checked = false;
+              }
+              break;
+
+            default:
+              break;
+          }
+        }
+      });
     }
   };
 
-  if (filterToggle !== null) {
-    filterToggle.addEventListener('click', toggleFilterClickHandler);
-  }
+  clearForm(filterClear, form);
+
 })();

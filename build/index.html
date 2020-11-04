@@ -12,19 +12,20 @@
   <link href="css/style.min.css" rel="stylesheet">
 
   <!-- Pixel Glass -->
+  <!--
   <style>
     HTML {
       background-repeat: no-repeat;
       background-position: 50% 0;
       /* По умолчанию показывается мобильный макет */
-      background-image: url("js/pixel-glass/preview/login-mobile.jpg");
+      background-image: url("pixel-glass/preview/index-mobile.jpg");
     }
 
     /* Планшет */
     @media (min-width: 768px) {
       HTML {
         /* Планшетный макет */
-        background-image: url("js/pixel-glass/preview/login-tablet.jpg");
+        background-image: url("pixel-glass/preview/index-tablet.jpg");
       }
     }
 
@@ -32,12 +33,12 @@
     @media (min-width: 1024px) {
       HTML {
         /* Десктопный макет */
-        background-image: url("js/pixel-glass/preview/login-desktop.jpg");
+        background-image: url("pixel-glass/preview/index-desktop.jpg");
       }
     }
   </style>
-  <link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
-  <script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
+  <link href="pixel-glass/styles.css" rel="stylesheet">
+  <script src="pixel-glass/script.js"></script>
   <!-- // Pixel Glass -->
 
 </head>
@@ -49,7 +50,7 @@
         <button type="button" class="page-header__toggle">
           <span class="page-header__icon"></span>
         </button>
-        <form class="page-header__search">
+        <form class="page-header__search" mehtod="get">
           <label class="page-header__search-label" for="" "search"="" aria-label="Search&quot;">
             <input type="search" id="search" name="site-search" placeholder="Type here to search">
           </label>
@@ -57,7 +58,37 @@
         <a class="page-header__logo">
           <img src="img/logo.svg" width="66" height="66" alt="Online store logo">
         </a>
-        <a href="#" class="page-header__login login-open">Login</a>
+        <a href="#" class="page-header__login modal-open">Login</a>
+        <div class="overlay overlay--login"></div>
+        <section class="login modal modal--login">
+          <div class="login__bg-wrap">
+            <button type="button" class="login__close modal-close" aria-label="Close">
+              <svg class="login__close-icon" width="14" height="14">
+                <use xlink:href="img/sprite.svg#modal-close-icon"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="login__wrap">
+            <h2>Log In</h2>
+            <form class="login__form" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru" autocomplete="off">
+              <label>
+                <input id="email" type="email" name="user-email" placeholder="Your E-mail">
+              </label>
+              <div class="login__password-wrap">
+                <label>
+                  <input id="password" type="password" name="user-password" placeholder="Password">
+                </label>
+                <a href="#" class="login__forgot">Forgot your password?</a>
+              </div>
+              <button class="login__submit button" type="submit" aria-label="Log in">Log in</button>
+            </form>
+            <div class="login__info">
+              <p>Don’t have an account?
+                <a href="#" class="login__sign-up">Sign up</a>
+              </p>
+            </div>
+          </div>
+        </section>
         <nav class="page-header__navigation page-header__navigation--index">
           <div class="page-header__catalog-menu">
             <a href="#" class="page-header__link page-header__link--catalog">What’s new</a>
@@ -89,86 +120,89 @@
   <main class="page-main">
     <div class="page-main__wrap">
       <h1 class="visually-hidden">Online jewelry store</h1>
+
       <section class="page-main__section page-main__section--index promo">
         <h2>New in</h2>
-        <div class="promo__arrow-wrap">
-          <a href="#" class="promo__prev" aria-label="flip left">
-            <svg class="promo__arrow" width="28" height="11">
-              <use xlink:href="img/sprite.svg#arrow-left-icon"></use>
-            </svg>
-          </a>
-          <a href="#" class="promo__next" aria-label="flip right">
-            <svg class="promo__arrow" width="28" height="11">
-              <use xlink:href="img/sprite.svg#arrow-right-icon"></use>
-            </svg>
-          </a>
-        </div>
-        <a class="page-main__link promo__link" href="catalog.html" aria-label="Catalog">Shop now</a>
-        <ul class="promo__list">
-          <li class="promo__item item">
-            <a href="card.html" class="promo__link">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile@1x.webp 1x, img/purple-gemstone-necklace-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet@1x.webp 1x, img/purple-gemstone-necklace-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/purple-gemstone-necklace-desktop@1x.webp 1x, img/purple-gemstone-necklace-desktop@2x.webp 2x">
-                <!-- 1x: 130px; 2x: 260px -->
-                <source media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile@1x.jpg 1x, img/purple-gemstone-necklace-mobile@2x.jpg 2x">
-                <!-- 1x: 324px; 2x: 648px -->
-                <source media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet@1x.jpg 1x, img/purple-gemstone-necklace-tablet@2x.jpg 2x">
-                <!-- 1x: 270px; 2x: 540px -->
-                <img class="promo__picture item__picture" src="img/purple-gemstone-necklace-desktop@1x.jpg" srcset="img/purple-gemstone-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
-              </picture>
-              <h3>Necklace with amethyst</h3>
-              <span class="item__price">$ 145</span>
+        <div class="swiper-container">
+          <div class="promo__arrow-wrap">
+            <a href="#" class="promo__prev swiper-button-prev" aria-label="flip left">
+              <svg class="promo__arrow" width="28" height="11">
+                <use xlink:href="img/sprite.svg#arrow-left-icon"></use>
+              </svg>
             </a>
-          </li>
-          <li class="promo__item item">
-            <a href="card.html" class="promo__link">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile@1x.webp 1x, img/layered-choker-necklace-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet@1x.webp 1x, img/layered-choker-necklace-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/layered-choker-necklace-desktop@1x.webp 1x, img/layered-choker-necklace-desktop@2x.webp 2x">
-                <!-- 1x: 130px; 2x: 260px -->
-                <source media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile@1x.jpg 1x, img/layered-choker-necklace-mobile@2x.jpg 2x">
-                <!-- 1x: 324px; 2x: 648px -->
-                <source media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet@1x.jpg 1x, img/layered-choker-necklace-tablet@2x.jpg 2x">
-                <!-- 1x: 270px; 2x: 540px -->
-                <img class="promo__picture item__picture" src="img/layered-choker-necklace-desktop@1x.jpg" srcset="img/layered-choker-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="Layered сhoker">
-              </picture>
-              <h3>Layered choker</h3>
-              <span class="item__price">$ 115</span>
+            <a href="#" class="promo__next swiper-button-next" aria-label="flip right">
+              <svg class="promo__arrow" width="28" height="11">
+                <use xlink:href="img/sprite.svg#arrow-right-icon"></use>
+              </svg>
             </a>
-          </li>
-          <li class="promo__item item">
-            <a href="card.html" class="promo__link">
-              <picture>
-                <source type="image/webp" srcset="img/dainty-gold-necklace-desktop@1x.webp 1x, img/dainty-gold-necklace-desktop@2x.webp 2x">
-                <!-- 1x: 270px; 2x: 540px -->
-                <img class="promo__picture item__picture" src="img/dainty-gold-necklace-desktop@1x.jpg" srcset="img/dainty-gold-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="Gold chain">
-              </picture>
-              <h3>Gold chain</h3>
-              <span class="item__price">$ 215</span>
-            </a>
-          </li>
-          <li class="promo__item item">
-            <a href="card.html" class="promo__link">
-              <picture>
-                <source type="image/webp" srcset="img/galaxy-earrings-desktop@1x.webp 1x, img/galaxy-earrings-desktop@2x.webp 2x">
-                <!-- 1x: 270px; 2x: 540px -->
-                <img class="promo__picture item__picture" src="img/galaxy-earrings-desktop@1x.jpg" srcset="img/galaxy-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
-              </picture>
-              <h3>Galaxy earrings</h3>
-              <span class="item__price">$ 95</span>
-            </a>
-          </li>
-        </ul>
-        <div class="promo__pagination pagination">
-          <a href="#" class="promo__pagination-link pagination__link">1</a>
-          <a href="#" class="promo__pagination-link pagination__link">2</a>
-          <a href="#" class="promo__pagination-link pagination__link">3</a>
-          <a href="#" class="promo__pagination-link pagination__link">4</a>
-          <a href="#" class="promo__pagination-link pagination__link">5</a>
-          <a href="#" class="promo__pagination-link pagination__link">6</a>
+          </div>
+          <a class="page-main__link promo__link" href="catalog.html" aria-label="Catalog">Shop now</a>
+          <ul class="promo__list swiper-wrapper">
+            <li class="promo__item item swiper-slide">
+              <a href="card.html" class="promo__link">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile@1x.webp 1x, img/purple-gemstone-necklace-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet@1x.webp 1x, img/purple-gemstone-necklace-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/purple-gemstone-necklace-desktop@1x.webp 1x, img/purple-gemstone-necklace-desktop@2x.webp 2x">
+                  <!-- 1x: 130px; 2x: 260px -->
+                  <source media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile@1x.jpg 1x, img/purple-gemstone-necklace-mobile@2x.jpg 2x">
+                  <!-- 1x: 324px; 2x: 648px -->
+                  <source media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet@1x.jpg 1x, img/purple-gemstone-necklace-tablet@2x.jpg 2x">
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <img class="promo__picture item__picture" src="img/purple-gemstone-necklace-desktop@1x.jpg" srcset="img/purple-gemstone-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
+                </picture>
+                <h3>Necklace with amethyst</h3>
+                <span class="item__price">$ 145</span>
+              </a>
+            </li>
+            <li class="promo__item item swiper-slide">
+              <a href="card.html" class="promo__link">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile@1x.webp 1x, img/layered-choker-necklace-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet@1x.webp 1x, img/layered-choker-necklace-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/layered-choker-necklace-desktop@1x.webp 1x, img/layered-choker-necklace-desktop@2x.webp 2x">
+                  <!-- 1x: 130px; 2x: 260px -->
+                  <source media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile@1x.jpg 1x, img/layered-choker-necklace-mobile@2x.jpg 2x">
+                  <!-- 1x: 324px; 2x: 648px -->
+                  <source media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet@1x.jpg 1x, img/layered-choker-necklace-tablet@2x.jpg 2x">
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <img class="promo__picture item__picture" src="img/layered-choker-necklace-desktop@1x.jpg" srcset="img/layered-choker-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="Layered сhoker">
+                </picture>
+                <h3>Layered choker</h3>
+                <span class="item__price">$ 115</span>
+              </a>
+            </li>
+            <li class="promo__item item swiper-slide">
+              <a href="card.html" class="promo__link">
+                <picture>
+                  <source type="image/webp" srcset="img/dainty-gold-necklace-desktop@1x.webp 1x, img/dainty-gold-necklace-desktop@2x.webp 2x">
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <img class="promo__picture item__picture" src="img/dainty-gold-necklace-desktop@1x.jpg" srcset="img/dainty-gold-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="Gold chain">
+                </picture>
+                <h3>Gold chain</h3>
+                <span class="item__price">$ 215</span>
+              </a>
+            </li>
+            <li class="promo__item item swiper-slide">
+              <a href="card.html" class="promo__link">
+                <picture>
+                  <source type="image/webp" srcset="img/galaxy-earrings-desktop@1x.webp 1x, img/galaxy-earrings-desktop@2x.webp 2x">
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <img class="promo__picture item__picture" src="img/galaxy-earrings-desktop@1x.jpg" srcset="img/galaxy-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+                </picture>
+                <h3>Galaxy earrings</h3>
+                <span class="item__price">$ 95</span>
+              </a>
+            </li>
+          </ul>
+          <div class="promo__pagination pagination">
+            <a href="#" class="promo__pagination-link pagination__link">1</a>
+            <a href="#" class="promo__pagination-link pagination__link">2</a>
+            <a href="#" class="promo__pagination-link pagination__link">3</a>
+            <a href="#" class="promo__pagination-link pagination__link">4</a>
+            <a href="#" class="promo__pagination-link pagination__link">5</a>
+            <a href="#" class="promo__pagination-link pagination__link">6</a>
+          </div>
         </div>
       </section>
       <section class="page-main__section blog">
@@ -236,34 +270,43 @@
       <section class="page-main__section faq">
         <h2>Frequently asked questions</h2>
         <ul class="faq__list">
-          <li class="faq__item">
-            <div class="faq__title-wrap">
+          <li class="faq__item dropdown dropdown--nojs">
+            <div class="faq__title-wrap dropdown__click">
               <h3>What materials are the jewellery made of?</h3>
-              <button class="faq__button" type="button"></button>
+              <button class="faq__button dropdown__button dropdown__button--closed" type="button"></button>
             </div>
-            <p>Our jewellerry is made of solid&nbsp;gold, silver or leather. Also, some jewellery contains precious and
-              semiprecious stones and crystals.</p>
+            <div class="dropdown__item">
+              <p>Our jewellerry is made of solid&nbsp;gold, silver or leather. Also, some jewellery contains precious
+                and emiprecious stones and crystals.</p>
+            </div>
           </li>
-          <li class="faq__item">
-            <div class="faq__title-wrap">
+          <li class="faq__item dropdown dropdown--nojs">
+            <div class="faq__title-wrap dropdown__click">
               <h3>Which countries do&nbsp;you&nbspdeliver to?</h3>
-              <button class="faq__button" type="button"></button>
+              <button class="faq__button dropdown__button dropdown__button--closed" type="button"></button>
             </div>
-            <p></p>
+            <div class="dropdown__item">
+              <p>Belgium, Denmark, Finland, Ireland, Italy, Luxembourg, Netherlands, Portugal, Sweden</p>
+            </div>
           </li>
-          <li class="faq__item">
-            <div class="faq__title-wrap">
+          <li class="faq__item dropdown dropdown--nojs">
+            <div class="faq__title-wrap dropdown__click">
               <h3>What are the payment&nbsp;methods?</h3>
-              <button class="faq__button" type="button"></button>
+              <button class="faq__button dropdown__button dropdown__button--closed" type="button"></button>
             </div>
-            <p></p>
+            <div class="dropdown__item">
+              <p>Visa, Mastercard, American Express, iDeal, Sofot</p>
+            </div>
           </li>
-          <li class="faq__item">
-            <div class="faq__title-wrap">
+          <li class="faq__item dropdown dropdown--nojs">
+            <div class="faq__title-wrap dropdown__click">
               <h3>Can I return the jewellery&nbsp;if&nbsp;it&nbsp;didn’t&nbsp;fit&nbsp;me?</h3>
-              <button class="faq__button" type="button"></button>
+              <button class="faq__button dropdown__button dropdown__button--closed" type="button"></button>
             </div>
-            <p></p>
+            <div class="dropdown__item">
+              <p>If for any reason you're not completely satisfied with your jewelry purchase, you can return it to us
+                within 90 days of receiving your purchase.</p>
+            </div>
           </li>
         </ul>
       </section>
@@ -361,7 +404,7 @@
           <h3><span>The good stuff</span> in&nbsp;your inbox</h3>
           <p>News and updates from CH. No spam, we promise.</p>
         </div>
-        <form class="page-footer__sign-up-form">
+        <form class="page-footer__sign-up-form" ethod="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru" autocomplete="off">
           <labl for="email" aria-label="Write your e-mail"></labl>
           <input type="email" id="email" name="email" placeholder="Your E-mail">
           <button class="page-footer__button" type="submit" aria-label="Sign Up">Sign Up</button>
@@ -440,39 +483,14 @@
     </div>
   </footer>
 
-  <div class="overlay overlay--login"></div>
-  <section class="login modal">
-    <div class="login__bg-wrap">
-      <button type="button" class="login__close modal-close" aria-label="Close">
-        <svg class="login__close-icon" width="14" height="14">
-          <use xlink:href="img/sprite.svg#modal-close-icon"></use>
-        </svg>
-      </button>
-    </div>
-    <div class="login__wrap">
-      <h2>Log In</h2>
-      <form class="login__form">
-        <label>
-          <input id="email" type="email" name="user-email" placeholder="Your E-mail">
-        </label>
-        <div class="login__password-wrap">
-          <label>
-            <input id="password" type="email" name="user-email" placeholder="Password">
-          </label>
-          <a href="#" class="login__forgot">Forgot your password?</a>
-        </div>
-        <button class="login__submit button" type="submit" aria-label="Log in">Log in</button>
-      </form>
-      <div class="login__info">
-        <p>Don’t have an account?
-          <a href="#" class="login__sign-up">Sign up</a>
-        </p>
-      </div>
-    </div>
-  </section>
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+  </script>
 
+  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/modal.js"></script>
+
 </body>
 
 </html>

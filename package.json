@@ -10,6 +10,7 @@
     "eslint": "4.16.0",
     "eslint-config-htmlacademy": "0.4.x",
     "gulp": "4.0.x",
+    "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "1.2.x",

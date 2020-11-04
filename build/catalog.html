@@ -48,7 +48,7 @@
         <button type="button" class="page-header__toggle">
           <span class="page-header__icon"></span>
         </button>
-        <form class="page-header__search">
+        <form class="page-header__search" method="get">
           <label class="page-header__search-label" for="" "search"="" aria-label="Search&quot;">
             <input type="search" id="search" name="site-search" placeholder="Type here to search">
           </label>
@@ -56,7 +56,7 @@
         <a href="index.html" class="page-header__logo page-header__logo--catalog">
           <img src="img/logo.svg" width="66" height="66" alt="Online store logo">
         </a>
-        <a href="#" class="page-header__login login-open">Login</a>
+        <a href="#" class="page-header__login modal-open">Login</a>
         <nav class="page-header__navigation page-header__navigation--catalog">
           <div class="page-header__catalog-menu">
             <a href="#" class="page-header__link page-header__link--catalog">What’s new</a>
@@ -80,6 +80,36 @@
         </a>
       </div>
     </div>
+    <div class="overlay overlay--login"></div>
+    <section class="login modal modal--login">
+      <div class="login__bg-wrap">
+        <button type="button" class="login__close modal-close" aria-label="Close">
+          <svg class="login__close-icon" width="14" height="14">
+            <use xlink:href="img/sprite.svg#modal-close-icon"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="login__wrap">
+        <h2>Log In</h2>
+        <form class="login__form" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru" autocomplete="off">
+          <label>
+            <input id="email" type="email" name="user-email" placeholder="Your E-mail">
+          </label>
+          <div class="login__password-wrap">
+            <label>
+              <input id="password" type="password" name="user-password" placeholder="Password">
+            </label>
+            <a href="#" class="login__forgot">Forgot your password?</a>
+          </div>
+          <button class="login__submit button" type="submit" aria-label="Log in">Log in</button>
+        </form>
+        <div class="login__info">
+          <p>Don’t have an account?
+            <a href="#" class="login__sign-up">Sign up</a>
+          </p>
+        </div>
+      </div>
+    </section>
     <div class="page-header__intro page-header__intro--catalog">
       <p>ALL JEWELLERY</p>
       <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
@@ -88,65 +118,104 @@
   <main class="page-main catalog">
     <a href="filter.html" class="catalog__filter-btn button modal-open">Filter</a>
     <div class="overlay overlay--filter"></div>
-    <section class="catalog__filter catalog__filter--closed">
+    <section class="catalog__filter catalog__filter--closed modal modal--filter">
       <h2 class="visually-hidden">Filter</h2>
       <button class="catalog__filter-close modal-close" type="button" aria-label="Close filter">
         <svg class="catalog__filter-close-icon" width="32" height="32">
           <use xlink:href="img/sprite.svg#filter-close-icon"></use>
         </svg>
       </button>
-      <form class="catalog__filter-form">
+      <form class="catalog__filter-form" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru" autocomplete="off">
         <div class="catalog__filter-wrap">
-          <div class="catalog__filter-product">
-            <div class="catalog__filter-title">
+          <div class="catalog__filter-product dropdown dropdown--nojs">
+            <div class="catalog__filter-title dropdown__click">
               <h3>Product</h3>
-              <buton class="catalog__filter-button" type="button">
+              <buton class="catalog__filter-button dropdown__button dropdown__button--closed" type="button">
               </buton>
             </div>
-            <div class="catalog__filter-field">
+            <div class="catalog__filter-field dropdown__item">
               <label class="catalog__filter-item">
-                <input class="visually-hidden" type="checkbox">
+                <input class="visually-hidden" name="filter" type="checkbox">
                 <span class="catalog__filter__check-field"></span>
                 <span>Necklaces</span>
               </label>
               <label class="catalog__filter-item">
-                <input class="visually-hidden" type="checkbox">
+                <input class="visually-hidden" name="filter" type="checkbox">
                 <span class="catalog__filter__check-field"></span>
                 <span>Chokers</span>
               </label>
               <label class="catalog__filter-item">
-                <input class="visually-hidden" type="checkbox">
+                <input class="visually-hidden" name="filter" type="checkbox">
                 <span class="catalog__filter__check-field"></span>
                 <span>Rings</span>
               </label>
               <label class="catalog__filter-item">
-                <input class="visually-hidden" type="checkbox">
+                <input class="visually-hidden" name="filter" type="checkbox">
                 <span class="catalog__filter__check-field"></span>
                 <span>Earrings</span>
               </label>
             </div>
           </div>
-          <div class="catalog__filter-product">
-            <div class="catalog__filter-title">
+          <div class="catalog__filter-product dropdown dropdown--nojs">
+            <div class="catalog__filter-title dropdown__click">
               <h3>Material</h3>
-              <buton class="catalog__filter-button" type="button">
+              <buton class="catalog__filter-button dropdown__button dropdown__button--closed" type="button">
               </buton>
             </div>
+            <div class="catalog__filter-field dropdown__item">
+              <label class="catalog__filter-item">
+                <input class="visually-hidden" name="filter" type="checkbox">
+                <span class="catalog__filter__check-field"></span>
+                <span>Gold</span>
+              </label>
+              <label class="catalog__filter-item">
+                <input class="visually-hidden" name="filter" type="checkbox">
+                <span class="catalog__filter__check-field"></span>
+                <span>Silver</span>
+              </label>
+            </div>
           </div>
-          <div class="catalog__filter-product">
-            <div class="catalog__filter-title">
+          <div class="catalog__filter-product dropdown dropdown--nojs">
+            <div class="catalog__filter-title dropdown__click">
               <h3>Collection</h3>
-              <buton class="catalog__filter-button" type="button">
+              <buton class="catalog__filter-button dropdown__button dropdown__button--closed" type="button">
               </buton>
+            </div>
+            <div class="catalog__filter-field dropdown__item">
+              <label class="catalog__filter-item">
+                <input class="visually-hidden" name="filter" type="checkbox">
+                <span class="catalog__filter__check-field"></span>
+                <span>Rings and Bling</span>
+              </label>
+              <label class="catalog__filter-item">
+                <input class="visually-hidden" name="filter" type="checkbox">
+                <span class="catalog__filter__check-field"></span>
+                <span>Hte Sparkle Sisters</span>
+              </label>
+              <label class="catalog__filter-item">
+                <input class="visually-hidden" name="filter" type="checkbox">
+                <span class="catalog__filter__check-field"></span>
+                <span>Gems Galore</span>
+              </label>
+              <label class="catalog__filter-item">
+                <input class="visually-hidden" name="filter" type="checkbox">
+                <span class="catalog__filter__check-field"></span>
+                <span>Dare to Dazzle</span>
+              </label>
+              <label class="catalog__filter-item">
+                <input class="visually-hidden" name="filter" type="checkbox">
+                <span class="catalog__filter__check-field"></span>
+                <span>Diamond Dreams</span>
+              </label>
             </div>
           </div>
-          <div class="catalog__filter-product">
-            <div class="catalog__filter-title">
+          <div class="catalog__filter-product dropdown dropdown--nojs">
+            <div class="catalog__filter-title dropdown__click">
               <h3>Price</h3>
-              <buton class="catalog__filter-button" type="button">
+              <buton class="catalog__filter-button dropdown__button dropdown__button--closed" type="button">
               </buton>
             </div>
-            <div class="catalog__filter-range">
+            <div class="catalog__filter-field catalog__filter-field--range dropdown__item">
               <div class="catalog__filter-controls">
                 <div class="catalog__filter-scale">
                   <div class="catalog__filter-bar"></div>
@@ -157,18 +226,18 @@
               <div class="catalog__filter-price-controls">
                 <label class="catalog__filter-price catalog__filter-price--min">
                   <span>$ 55</span>
-                  <input name="min-price" type="number" value="$ 55">
+                  <input name="filter" type="number" value="$ 55">
                 </label>
                 <label class="catalog__filter-price catalog__filter-price--max">
                   <span>$ 155</span>
-                  <input name="min-price" type="number" value="$ 155">
+                  <input name="filter" type="number" value="$ 155">
                 </label>
               </div>
             </div>
           </div>
         </div>
         <button class="catalog__filter-submit button" type="submit">Apply</button>
-        <button class="catalog__filter-clear button button--white" type="submit">Clear all</button>
+        <button class="catalog__filter-clear button button--white" type="button">Clear all</button>
       </form>
     </section>
     <section class="catalog__products">
@@ -277,7 +346,7 @@
             <img class="catalog__products-picture item__picture" src="img/black-leather-choker-necklace-desktop@1x.jpg" srcset="img/black-leather-choker-necklace-desktop@2x.jpg 2x" width="270" height="272" alt="Black leather choker">
           </picture>
           <h3>Black leather choker</h3>
-          <span class="catalog__products--price item__price">$ 85</span>
+          <span class="catalog__products-price item__price">$ 85</span>
         </a>
         <a href="card.html" class="catalog__products-item item">
           <picture>
@@ -352,7 +421,7 @@
             <img class="catalog__products-picture item__picture" src="img/marble-earrings-desktop@1x.jpg" srcset="img/marble-earrings-desktop@2x.jpg 2x" width="270" height="272" alt="Marble earrings">
           </picture>
           <h3>Marble&nbsp;earrings</h3>
-          <span class="catalog__products--price item__price">$ 95</span>
+          <span class="catalog__products-price item__price">$ 95</span>
         </a>
       </div>
       <div class="catalog__products-pagination pagination">
@@ -376,7 +445,7 @@
           <h3><span>The good stuff</span> in&nbsp;your inbox</h3>
           <p>News and updates from CH. No spam, we promise.</p>
         </div>
-        <form class="page-footer__sign-up-form">
+        <form class="page-footer__sign-up-form" ethod="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru" autocomplete="off">
           <labl for="email" aria-label="Write your e-mail"></labl>
           <input type="email" id="email" name="email" placeholder="Your E-mail">
           <button class="page-footer__button" type="submit" aria-label="Sign Up">Sign Up</button>
@@ -455,8 +524,15 @@
     </div>
   </footer>
 
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+  </script>
+
+  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/filter.js"></script>
+
+
 </body>
 
 </html>

@@ -1,10 +1,5 @@
 .login {
-  margin: 0 auto;
-  position: fixed;
-  top: 100px;
-  left: 0;
-  right: 0;
-  z-index: 3;
+  z-index: 25;
 
   width: 430px;
 
@@ -12,12 +7,10 @@
   box-shadow: 0 5px 32px rgba(226, 221, 215, 0.24);
 
   @include tablet {
-    top: 80px;
     width: 442px;
   }
 
   @include mobile {
-    top: 50px;
     width: 270px;
   }
 }

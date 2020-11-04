@@ -2,14 +2,21 @@
   display: none;
 
   position: fixed;
-  /*
+
+  z-index: 20;
+
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  */
 
   &--filter {
     display: block;
+    position: initial;
+    transform: none;
+  }
+
+  &--login {
+    z-index: 25;
   }
 
   &--show {
@@ -19,7 +26,18 @@
   @include tablet {
     &--filter {
       display: none;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      z-index: 20;
     }
+
+    &--show {
+      display: block;
+    }
+
   }
 }
 

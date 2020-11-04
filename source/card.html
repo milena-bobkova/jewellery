@@ -48,7 +48,7 @@
         <button type="button" class="page-header__toggle">
           <span class="page-header__icon"></span>
         </button>
-        <form class="page-header__search">
+        <form class="page-header__search" method="get">
           <label class="page-header__search-label" for "search" aria-label=Search">
             <input type="search" id="search" name="site-search" placeholder="Type here to search">
           </label>
@@ -56,7 +56,38 @@
         <a href="index.html" class="page-header__logo page-header__logo--catalog">
           <img src="img/logo.svg" width="66" height="66" alt="Online store logo">
         </a>
-        <a href="#" class="page-header__login login-open">Login</a>
+        <a href="#" class="page-header__login modal-open">Login</a>
+        <div class="overlay overlay--login"></div>
+        <section class="login modal modal--login">
+          <div class="login__bg-wrap">
+            <button type="button" class="login__close modal-close" aria-label="Close">
+              <svg class="login__close-icon" width="14" height="14">
+                <use xlink:href="img/sprite.svg#modal-close-icon"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="login__wrap">
+            <h2>Log In</h2>
+            <form class="login__form" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru"
+              autocomplete="off">
+              <label>
+                <input id="email" type="email" name="user-email" placeholder="Your E-mail">
+              </label>
+              <div class="login__password-wrap">
+                <label>
+                  <input id="password" type="password" name="user-password" placeholder="Password">
+                </label>
+                <a href="#" class="login__forgot">Forgot your password?</a>
+              </div>
+              <button class="login__submit button" type="submit" aria-label="Log in">Log in</button>
+            </form>
+            <div class="login__info">
+              <p>Don’t have an account?
+                <a href="#" class="login__sign-up">Sign up</a>
+              </p>
+            </div>
+          </div>
+        </section>
         <nav class="page-header__navigation page-header__navigation--catalog">
           <div class="page-header__catalog-menu">
             <a href="#" class="page-header__link page-header__link--catalog">What’s new</a>
@@ -284,7 +315,8 @@
           <h3><span>The good stuff</span> in&nbsp;your inbox</h3>
           <p>News and updates from CH. No spam, we promise.</p>
         </div>
-        <form class="page-footer__sign-up-form">
+        <form class="page-footer__sign-up-form" ethod="post" enctype="multipart/form-data"
+          action="https://echo.htmlacademy.ru" autocomplete="off">
           <labl for="email" aria-label="Write your e-mail"></labl>
           <input type="email" id="email" name="email" placeholder="Your E-mail">
           <button class="page-footer__button" type="submit" aria-label="Sign Up">Sign Up</button>
@@ -366,7 +398,7 @@
   <div class="overlay overlay--card"></div>
   <section class="add modal">
     <div class="add__wrap">
-      <button type="button" class="add__close modal-close" aria-label="Close">
+      <button type="button" class="add__close modal-close" aria-label="Close" tabindex="6">
         <svg class="add__close-icon" width="14" height="14">
           <use xlink:href="img/sprite.svg#modal-close-icon"></use>
         </svg>
@@ -395,15 +427,15 @@
           <p>$ 115</p>
         </div>
         <form class="add__quantity">
-          <button class="add__button" type="button" aria-label="Increase">
+          <button class="add__button" type="button" aria-label="Increase" tabindex="1">
             <svg class="add__icon add__icon--plus" width="14" height="14">
               <use xlink:href="img/sprite.svg#plus-icon"></use>
             </svg>
           </button>
           <label>
-            <input type="text" name="duration" value="1" id="num-duration">
+            <input type="text" name="duration" value="1" id="num-duration" tabindex="2">
           </label>
-          <button class="add__button" type="button" aria-label="Reduce">
+          <button class="add__button" type="button" aria-label="Reduce" tabindex="3">
             <svg class="modal-add__icon modal-add__icon--minus" width="14" height="2">
               <use xlink:href="img/sprite.svg#minus-icon"></use>
             </svg>
@@ -415,14 +447,20 @@
         <span>Cart subtotal: $ 115</span>
       </div>
       <div class="add__links">
-        <a href="catalog.html" class="add__link add__link--catalog button button--white">Continue shopping</a>
-        <a href="cart.html" class="add__link button">Checkout</a>
+        <a href="catalog.html" class="add__link add__link--catalog button button--white" tabindex="4">Continue
+          shopping</a>
+        <a href="cart.html" class="add__link button" tabindex="5">Checkout</a>
       </div>
     </div>
   </section>
 
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+  </script>
+
+  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/modal.js"></script>
 </body>
 
 </html>

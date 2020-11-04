@@ -37,36 +37,20 @@
 .catalog__filter {
   width: 21.37%;
 
+  z-index: 15;
+
   @include tablet {
+    background-color: $white;
+    width: 442px;
+    box-sizing: border-box;
+
     &--opened {
-      position: fixed;
-      top: 66px;
-
-      margin: 0 auto;
-
-      width: 442px;
-      box-sizing: border-box;
-
-      left: 0;
-      right: 0;
-      z-index: 3;
-
-      background-color: $white;
-
       display: block;
-    }
-
-    &--closed {
-      display: none;
     }
   }
 
   @include mobile {
-    &--opened {
-      top: 76px;
-
-      width: 280px;
-    }
+    width: 280px;
   }
 }
 
@@ -161,11 +145,12 @@
 
 .catalog__filter-product {
   padding: 24px 10% 0;
-  margin: -1px 0 0 0;
   border: 1px solid $brown;
+  border-bottom: none;
 
   &:last-of-type {
-    padding: 24px 10% 18px;
+    padding: 24px 10% 0;
+    border-bottom: 1px solid $brown;
   }
 
   @include tablet {
@@ -179,7 +164,7 @@
     }
 
     &:last-of-type {
-      padding: 35px 9% 33px;
+      padding: 35px 9% 0;
     }
   }
 
@@ -191,7 +176,7 @@
     }
 
     &:last-of-type {
-      padding: 25px 9% 25px;
+      padding: 25px 9% 0;
     }
   }
 }
@@ -199,12 +184,24 @@
 .catalog__filter-field {
   padding: 0 10px 26px;
 
+  &--range {
+    padding: 3px 0 18px 0;
+  }
+
   @include tablet {
     padding: 0 10px 35px;
+
+    &--range {
+      padding: 10px 0 33px 0;
+    }
   }
 
   @include mobile {
     padding: 0 10px 25px;
+
+    &--range {
+      padding: 10px 0 25px 0;
+    }
   }
 }
 
@@ -258,14 +255,6 @@
 
 .catalog__filter-item input:checked + .catalog__filter__check-field::before {
   background-color: $brown;
-}
-
-.catalog__filter-range {
-  padding: 3px 0 0 0;
-
-  @include tablet {
-    padding: 10px 0 0 0;
-  }
 }
 
 .catalog__filter-controls {
@@ -390,13 +379,14 @@
 }
 
 .catalog__filter-submit {
+  margin: 0 auto 25px;
+
   width: 100%;
   text-align: center;
   letter-spacing: 0.05em;
 
   @include tablet {
     width: 362px;
-    margin: 0 auto 25px;
   }
 
   @include mobile {
@@ -406,7 +396,7 @@
 }
 
 .catalog__filter-clear {
-  display: none;
+  width: 100%;
 
   @include tablet {
     display: block;
