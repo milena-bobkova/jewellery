@@ -105,17 +105,44 @@
     });
   };
 
-  var showModals = function () {
-    if (modalOpenButtons.length > 0 && modals.length > 0 && modalOverlays.length > 0) {
-      for (var i = 0; i < modals.length; i++) {
-        if (modalOpenButtons[i] !== null && modalCloseButtons[i] !== null && modals[i] !== 0 && modals[i].childNodes.length > 0 && modalOverlays[i] !== 0) {
-          openModalHandler(modalOpenButtons[i], modals[i], modalOverlays[i]);
-          closeModalHandler(modalCloseButtons[i], modals[i], modalOverlays[i]);
-        }
-      }
-    }
-  };
+  var modalLogin = document.querySelector('.login');
+  var loginOverlay = document.querySelector('.login-overlay');
+  var loginOpenButton = document.querySelector('.login-open');
+  var loginCloseButton = document.querySelector('.login-close');
 
-  showModals();
+  var showLogin = function () {
+    if (loginOpenButton !== null && loginCloseButton !== null && modalLogin !== 0 && modalLogin.childNodes.length > 0 && loginOverlay !== 0) {
+      openModalHandler(loginOpenButton, modalLogin, loginOverlay);
+      closeModalHandler(loginCloseButton, modalLogin, loginOverlay);
+    }
+  }
+
+  var modalFilter = document.querySelector('.filter');
+  var filterOverlay = document.querySelector('.filter-overlay');
+  var filterOpenButton = document.querySelector('.filter-open');
+  var filterCloseButton = document.querySelector('.filter-close');
+
+  var showFilter = function () {
+    if (filterOpenButton !== null && filterCloseButton !== null && modalFilter !== 0 && modalFilter.childNodes.length > 0 && filterOverlay !== 0) {
+      openModalHandler(filterOpenButton, modalFilter, filterOverlay);
+      closeModalHandler(filterCloseButton, modalFilter, filterOverlay);
+    }
+  }
+
+  var modalAdd = document.querySelector('.add');
+  var addOverlay = document.querySelector('.add-overlay');
+  var addOpenButton = document.querySelector('.add-open');
+  var addCloseButton = document.querySelector('.add-close');
+
+  var showAdd = function () {
+    if (addOpenButton !== null && addCloseButton !== null && modalAdd !== 0 && modalAdd.childNodes.length > 0 && addOverlay !== 0) {
+      openModalHandler(addOpenButton, modalAdd, addOverlay);
+      closeModalHandler(addCloseButton, modalAdd, addOverlay);
+    }
+  }
+
+  showLogin();
+  showFilter();
+  showAdd();
 
 })();

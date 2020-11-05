@@ -57,37 +57,6 @@
           <img src="img/logo.svg" width="66" height="66" alt="Online store logo">
         </a>
         <a href="#" class="page-header__login modal-open">Login</a>
-        <div class="overlay overlay--login"></div>
-        <section class="login modal modal--login">
-          <div class="login__bg-wrap">
-            <button type="button" class="login__close modal-close" aria-label="Close">
-              <svg class="login__close-icon" width="14" height="14">
-                <use xlink:href="img/sprite.svg#modal-close-icon"></use>
-              </svg>
-            </button>
-          </div>
-          <div class="login__wrap">
-            <h2>Log In</h2>
-            <form class="login__form" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru"
-              autocomplete="off">
-              <label>
-                <input id="email" type="email" name="user-email" placeholder="Your E-mail">
-              </label>
-              <div class="login__password-wrap">
-                <label>
-                  <input id="password" type="password" name="user-password" placeholder="Password">
-                </label>
-                <a href="#" class="login__forgot">Forgot your password?</a>
-              </div>
-              <button class="login__submit button" type="submit" aria-label="Log in">Log in</button>
-            </form>
-            <div class="login__info">
-              <p>Don’t have an account?
-                <a href="#" class="login__sign-up">Sign up</a>
-              </p>
-            </div>
-          </div>
-        </section>
         <nav class="page-header__navigation page-header__navigation--catalog">
           <div class="page-header__catalog-menu">
             <a href="#" class="page-header__link page-header__link--catalog">What’s new</a>
@@ -200,7 +169,7 @@
           <dt class="card__info-list-dt card__info-list-dt--small">Size</dt>
           <dd class="card__info-list-dd card__info-list-dd--small">18” / 20”</dd>
         </dl>
-        <a class="card__button button modal-open">Add to cart</a>
+        <a href="#" class="card__button button modal-open add-open">Add to cart</a>
         <div class="card__conditions">
           <p>14 Day Returns</p>
           <p>2-Year Warranty</p>
@@ -395,10 +364,42 @@
     </div>
   </footer>
 
-  <div class="overlay overlay--card"></div>
+  <div class="overlay overlay--login login-overlay"></div>
+  <section class="login modal modal--login">
+    <div class="login__bg-wrap">
+      <button type="button" class="login__close modal-close login-close" aria-label="Close">
+        <svg class="login__close-icon" width="14" height="14">
+          <use xlink:href="img/sprite.svg#modal-close-icon"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="login__wrap">
+      <h2>Log In</h2>
+      <form class="login__form" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru"
+        autocomplete="off">
+        <label>
+          <input id="email" type="email" name="user-email" placeholder="Your E-mail">
+        </label>
+        <div class="login__password-wrap">
+          <label>
+            <input id="password" type="password" name="user-password" placeholder="Password">
+          </label>
+          <a href="#" class="login__forgot">Forgot your password?</a>
+        </div>
+        <button class="login__submit button" type="submit" aria-label="Log in">Log in</button>
+      </form>
+      <div class="login__info">
+        <p>Don’t have an account?
+          <a href="#" class="login__sign-up">Sign up</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="overlay overlay--card add-overlay"></div>
   <section class="add modal">
     <div class="add__wrap">
-      <button type="button" class="add__close modal-close" aria-label="Close" tabindex="6">
+      <button type="button" class="add__close modal-close add-close" aria-label="Close" tabindex="6">
         <svg class="add__close-icon" width="14" height="14">
           <use xlink:href="img/sprite.svg#modal-close-icon"></use>
         </svg>
