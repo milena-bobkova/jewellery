@@ -1,5 +1,5 @@
 .promo {
-  padding: 120px 0 115px;
+  padding: 118px 0 115px;
 
   width: 100%;
 
@@ -65,7 +65,7 @@
 }
 
 .promo__arrow-wrap {
-  margin: -7px 0 6px 0;
+  margin: -5px 0 6px 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -92,17 +92,16 @@
 
   @include tablet {
     width: 100%;
-    overflow: hidden;
   }
 }
 
 .promo__item {
-  margin: 55px 2.56% 52px 0;
+  margin: 55px 2.56% 50px 0;
 
   width: 23.08%;
 
   &:nth-of-type(4n) {
-    margin: 55px 0 52px;
+    margin: 55px 0 50px;
   }
 
   @include tablet {
@@ -125,7 +124,7 @@
 }
 
 .promo__picture {
-  margin: 0 0 18px 0;
+  margin: 0 0 23px 0;
   display: block;
 
   max-width: 100%;
@@ -149,7 +148,7 @@
 }
 
 .promo__pagination {
-  width: 48px;
+  width: 51px;
 
   @include tablet {
     width: 118px;

@@ -17,14 +17,14 @@
       background-repeat: no-repeat;
       background-position: 50% 0;
       /* По умолчанию показывается мобильный макет */
-      background-image: url("js/pixel-glass/preview/filter-mobile.jpg");
+      background-image: url("js/pixel-glass/preview/catalog-mobile.jpg");
     }
 
     /* Планшет */
     @media (min-width: 768px) {
       HTML {
         /* Планшетный макет */
-        background-image: url("js/pixel-glass/preview/filter-tablet.jpg");
+        background-image: url("js/pixel-glass/preview/catalog-tablet.jpg");
       }
     }
 
@@ -36,9 +36,10 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
-  <script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
+  <link href="js/pixel-glass/styles.css" rel="stylesheet">
+  <script src="js/pixel-glass/script.js"></script>
   <!-- // Pixel Glass -->
+
 </head>
 
 <body>
@@ -48,8 +49,8 @@
         <button type="button" class="page-header__toggle">
           <span class="page-header__icon"></span>
         </button>
-        <form class="page-header__search" method="get">
-          <label class="page-header__search-label" for="" "search"="" aria-label="Search&quot;">
+        <form class="page-header__search">
+          <label class="page-header__search-label" for="search" aria-label="Search">
             <input type="search" id="search" name="site-search" placeholder="Type here to search">
           </label>
         </form>
@@ -86,6 +87,7 @@
     </div>
   </header>
   <main class="page-main catalog">
+    <h1 class="visually-hidden">Catalog</h1>
     <a href="#" class="catalog__filter-btn button modal-open filter-open">Filter</a>
     <div class="overlay overlay--filter filter-overlay"></div>
     <section class="catalog__filter catalog__filter--closed modal modal--filter filter">
@@ -100,8 +102,8 @@
           <div class="catalog__filter-product dropdown dropdown--nojs">
             <div class="catalog__filter-title dropdown__click">
               <h3>Product</h3>
-              <buton class="catalog__filter-button dropdown__button dropdown__button--closed" type="button">
-              </buton>
+              <button class="catalog__filter-button dropdown__button dropdown__button--closed" type="button">
+              </button>
             </div>
             <div class="catalog__filter-field dropdown__item">
               <label class="catalog__filter-item">
@@ -129,8 +131,8 @@
           <div class="catalog__filter-product dropdown dropdown--nojs">
             <div class="catalog__filter-title dropdown__click">
               <h3>Material</h3>
-              <buton class="catalog__filter-button dropdown__button dropdown__button--closed" type="button">
-              </buton>
+              <button class="catalog__filter-button dropdown__button dropdown__button--closed" type="button">
+              </button>
             </div>
             <div class="catalog__filter-field dropdown__item">
               <label class="catalog__filter-item">
@@ -148,8 +150,8 @@
           <div class="catalog__filter-product dropdown dropdown--nojs">
             <div class="catalog__filter-title dropdown__click">
               <h3>Collection</h3>
-              <buton class="catalog__filter-button dropdown__button dropdown__button--closed" type="button">
-              </buton>
+              <button class="catalog__filter-button dropdown__button dropdown__button--closed" type="button">
+              </button>
             </div>
             <div class="catalog__filter-field dropdown__item">
               <label class="catalog__filter-item">
@@ -182,8 +184,8 @@
           <div class="catalog__filter-product dropdown dropdown--nojs">
             <div class="catalog__filter-title dropdown__click">
               <h3>Price</h3>
-              <buton class="catalog__filter-button dropdown__button dropdown__button--closed" type="button">
-              </buton>
+              <button class="catalog__filter-button dropdown__button dropdown__button--closed" type="button">
+              </button>
             </div>
             <div class="catalog__filter-field catalog__filter-field--range dropdown__item">
               <div class="catalog__filter-controls">
@@ -196,11 +198,11 @@
               <div class="catalog__filter-price-controls">
                 <label class="catalog__filter-price catalog__filter-price--min">
                   <span>$ 55</span>
-                  <input name="filter" type="number" value="$ 55">
+                  <input name="filter" type="number" value="55">
                 </label>
                 <label class="catalog__filter-price catalog__filter-price--max">
                   <span>$ 155</span>
-                  <input name="filter" type="number" value="$ 155">
+                  <input name="filter" type="number" value="155">
                 </label>
               </div>
             </div>
@@ -415,8 +417,8 @@
           <h3><span>The good stuff</span> in&nbsp;your inbox</h3>
           <p>News and updates from CH. No spam, we promise.</p>
         </div>
-        <form class="page-footer__sign-up-form" ethod="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru" autocomplete="off">
-          <labl for="email" aria-label="Write your e-mail"></labl>
+        <form class="page-footer__sign-up-form" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru" autocomplete="off">
+          <label for="email" aria-label="Write your e-mail"></label>
           <input type="email" id="email" name="email" placeholder="Your E-mail">
           <button class="page-footer__button" type="submit" aria-label="Sign Up">Sign Up</button>
         </form>
@@ -508,20 +510,20 @@
     <div class="login__wrap">
       <h2>Log In</h2>
       <form class="login__form" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru" autocomplete="off">
-        <label>
-          <input id="email" type="email" name="user-email" placeholder="Your E-mail">
+        <label for="email-id" aria-label="User email">
+          <input id="email-id" type="email" name="user-email" placeholder="Your E-mail">
         </label>
         <div class="login__password-wrap">
-          <label>
-            <input id="password" type="password" name="user-password" placeholder="Password">
+          <label for="password-id" aria-label="User password">
+            <input id="password-id" type="password" name="user-password" placeholder="Password">
           </label>
-          <a href="#" class="login__forgot">Forgot your password?</a>
+          <a href="#" class="login__forgot" aria-label="Forgot your password?">Forgot your password?</a>
         </div>
         <button class="login__submit button" type="submit" aria-label="Log in">Log in</button>
       </form>
       <div class="login__info">
         <p>Don’t have an account?
-          <a href="#" class="login__sign-up">Sign up</a>
+          <a href="#" class="login__sign-up" aria-label="Sign up">Sign up</a>
         </p>
       </div>
     </div>

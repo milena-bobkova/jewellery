@@ -159,7 +159,7 @@
   margin: 12px 0 0 0;
   padding: 0 0 0 28px;
 
-  width: 180px;
+  width: 182px;
 
   color: $grey;
 
@@ -527,9 +527,11 @@
 .page-header__intro {
   text-align: center;
   color: $white;
+  background-color: #735b4c;
 
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
 
   p {
     @include reset;
@@ -581,9 +583,6 @@
     padding: 180px 0 185px;
 
     background-image: url("../img/intro-bg-desktop@1x.jpg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/intro-bg-desktop@2x.jpg");
@@ -612,9 +611,6 @@
     padding: 92px 0 95px;
 
     background-image: url("../img/catalog-bg-desktop@1x.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/catalog-bg-desktop@2x.jpg");

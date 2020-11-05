@@ -4,6 +4,10 @@
 
   display: flex;
   justify-content: space-between;
+
+  @include tablet {
+    overflow: visible;
+  }
 }
 
 .pagination__link {
