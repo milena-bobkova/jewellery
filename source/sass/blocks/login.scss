@@ -176,4 +176,15 @@
   vertical-align: top;
 
   color: $dark;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
 }

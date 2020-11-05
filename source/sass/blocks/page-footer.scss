@@ -34,8 +34,8 @@
 }
 
 .page-footer__sign-up-wrap {
-  margin: 0 2% 0 0;
-  width: 42.8%;
+  margin: 0 8.29% 0 0;
+  width: 42.74%;
 
   &--catalog {
     margin: 0 0.8% 0 0;
@@ -47,6 +47,7 @@
   }
 
   @include mobile {
+    margin: 0 0 50px 0;
     width: 100%;
   }
 }
@@ -162,6 +163,18 @@
   border: none;
   background-color: transparent;
   color: $white;
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
 
   &::after {
     @include pseudo;
@@ -174,11 +187,27 @@
   }
 }
 
+.page-footer__lists {
+  width: 48.96%;
+
+  display: flex;
+  justify-content: space-between;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include mobile {
+    display: block;
+  }
+}
+
 .page-footer__delivery {
   @include list-reset;
 
   margin: 7px 0 0 0;
-  width: 15.6%;
+  width: 44.50%;
+  text-align: left;
 
   &--catalog {
     width: 14.5%;
@@ -191,6 +220,7 @@
   }
 
   @include mobile {
+    margin: 0 0 50px 0;
     width: 100%;
   }
 }
@@ -199,7 +229,9 @@
   @include list-reset;
 
   margin: 8px 0 0 0;
-  width: 11%;
+
+  text-align: left;
+  width: 35.42%;
 
   &--catalog {
     width: 11.4%;
@@ -212,7 +244,7 @@
   }
 
   @include mobile {
-    margin: 20px 0 0 0;
+    margin: 0 0 50px 0;
     width: 100%;
   }
 }
@@ -221,7 +253,7 @@
   @include list-reset;
 
   margin: 8px 0 0 0;
-  width: 9.9%;
+  width: 20.07%;
 
   @include tablet {
     width: 17%;
@@ -258,6 +290,15 @@
 
   &--social {
     display: flex;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
   }
 
   @include mobile {

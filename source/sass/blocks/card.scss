@@ -26,19 +26,15 @@
 
 .card__photos {
   padding: 10px 0 0 0;
-  width: 51.3%;
-  height: 435px;
+  width: 51.28%;
+
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-end;
 
   @include tablet {
-    width: 47.06%;
+    width: 47.05%;
     height: auto;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
   }
 
   @include mobile {
@@ -49,28 +45,39 @@
   }
 }
 
-.card__photo-wrap {
+.card__photos-wrap {
+  margin: 0 5% 0 0;
+  width: 16.67%;
+
   @include tablet {
-    &--big {
-      order: -1;
-    }
+    width: 100%;
+    display: flex;
   }
+}
+
+.card__photo-wrap {
+  margin: 0 0 30px 0;
+  width: 100%;
 
   @include mobile {
     display: none;
+  }
+}
 
-    &--big {
-      display: block;
-    }
+.card__photo-wrap-big {
+  width: 78.33%;
+
+  @include tablet {
+    width: 100%;
+    order: -1;
   }
 }
 
 .card__photo {
   display: block;
 
-  &--big {
-    margin: 0 0 0 30px;
-  }
+  max-width: 100%;
+  height: auto;
 
   @include tablet {
     width: 97px;
@@ -107,9 +114,7 @@
 }
 
 .card__info {
-  margin: 0 8.6% 0 0;
-
-  width: 31.63%;
+  width: 40.17%;
   text-align: left;
 
   h3 {
@@ -117,6 +122,7 @@
     @include text(700, 34px, 130%);
 
     margin: 0 0 12px 0;
+    width: 78.73%;
 
     font-family: "CormorantGaramond", "PTSerif", serif;
     color: $dark;
@@ -127,7 +133,8 @@
     @include reset;
     @include text(400, 26px, 33.8px);
 
-    margin: 0 0 38px 0;
+    margin: 0 0 10.21% 0;
+    width: 78.73%;
 
     color: $dark;
   }
@@ -135,6 +142,10 @@
   @include tablet {
     margin: 0;
     width: 47.06%;
+
+    p {
+      margin: 0 0 15.21% 0;
+    }
   }
 
   @include mobile {
@@ -149,13 +160,14 @@
 .card__info-list {
   @include reset;
 
-  margin: 0 0 22px 0;
+  margin: 0 0 5.32% 0;
+  width: 78.73%;
 
   display: flex;
   justify-content: space-between;
 
   &:first-of-type {
-    margin: 0 0 32px 0;
+    margin: 0 0 8.65% 0;
     justify-content: flex-start;
   }
 }
@@ -190,8 +202,12 @@
 }
 
 .card__button {
-  margin: 62px 0 15px 0;
-  width: 100%;
+  margin: 13.19% 0 3.19% 0;
+  width: 78.73%;
+
+  @include tablet {
+    margin: 18.8% 0 6.19% 0;
+  }
 
   @include mobile {
     margin: 52px 0 12px 0;
@@ -200,13 +216,22 @@
 
 .card__conditions {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+
+  width: 78.73%;
 
   p {
     @include reset;
     @include text(500, 14px, 130%);
 
+    margin: 0 5.74% 0 0;
+    white-space: nowrap;
+
     color: $grey;
+
+    &:last-of-type {
+      margin: 0;
+    }
   }
 
   @include tablet {
@@ -219,6 +244,7 @@
     p {
       width: 24%;
       text-align: center;
+      white-space: initial;
     }
   }
 }

@@ -1,6 +1,8 @@
 .promo {
   padding: 120px 0 115px;
 
+  width: 100%;
+
   h2 {
     line-height: 100%;
   }
@@ -29,6 +31,15 @@
     margin: -5px 0 10px 0;
   }
 
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.5;
+  }
+
   @include tablet {
     margin: -2px 0 0 0;
   }
@@ -37,6 +48,19 @@
     &--card {
       margin: 20px 0 -10px 0;
     }
+  }
+}
+
+.promo__link-item {
+  display: block;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -133,5 +157,17 @@
 
   @include mobile {
     width: 48px;
+  }
+}
+
+.promo__next,
+.promo__prev {
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
   }
 }
