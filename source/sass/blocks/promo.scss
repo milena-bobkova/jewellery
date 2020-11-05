@@ -82,7 +82,8 @@
   }
 
   @include tablet {
-    margin: 55px 30px 43px 0;
+    margin: 55px 4.42% 43px 0;
+    width: 47.79%;
 
     &:nth-of-type(2n) {
       margin: 55px 0 43px;
@@ -90,7 +91,8 @@
   }
 
   @include mobile {
-    margin: 55px 30px 33px 0;
+    margin: 55px 10.34% 33px 0;
+    width: 44.83%;
 
     &:nth-of-type(2n) {
       margin: 55px 0 33px;
@@ -100,6 +102,10 @@
 
 .promo__picture {
   margin: 0 0 18px 0;
+  display: block;
+
+  max-width: 100%;
+  height: auto;
 
   @include tablet {
     margin: 0 0 15px 0;
