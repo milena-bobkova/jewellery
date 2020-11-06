@@ -38,7 +38,7 @@
   width: 42.74%;
 
   &--catalog {
-    margin: 0 0.8% 0 0;
+    margin: 0 7.5% 0 0;
   }
 
   @include tablet {
@@ -57,7 +57,7 @@
     @include reset;
     @include text(700, 34px, 130%);
 
-    margin: 0 0 11px 0;
+    margin: 0 0 10px 0;
     font-family: "CormorantGaramond", "PTSerif", serif;
     letter-spacing: 0.021em;
   }
@@ -204,7 +204,7 @@
   justify-content: space-between;
 
   &--catalog {
-    width: 49.74%;
+    width: 49.5%;
   }
 
   @include tablet {
@@ -219,12 +219,12 @@
 .page-footer__delivery {
   @include list-reset;
 
-  margin: 7px 0 0 0;
+  margin: 6px 0 0 0;
   width: 44.5%;
   text-align: left;
 
   &--catalog {
-    width: 42.3%;
+    width: 41%;
   }
 
   @include tablet {
@@ -242,14 +242,14 @@
 .page-footer__about {
   @include list-reset;
 
-  margin: 8px 0 0 0;
+  margin: 7px 0 0 0;
 
   text-align: left;
   width: 35.42%;
 
   &--catalog {
     margin: 8px 0 0 8px;
-    width: 38.5%;
+    width: 37%;
   }
 
   @include tablet {
@@ -271,7 +271,7 @@
 .page-footer__socials {
   @include list-reset;
 
-  margin: 8px 0 0 0;
+  margin: 7px 0 0 0;
   width: 20.07%;
 
   @include tablet {

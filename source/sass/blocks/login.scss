@@ -123,6 +123,7 @@
     background-color: transparent;
     border: none;
     border-bottom: 1px solid $dark;
+    border-radius: 0;
   }
 
   @include mobile {
@@ -137,6 +138,7 @@
 
   input {
     margin: 0 0 4px 0;
+    border-radius: 0;
   }
 
   @include mobile {

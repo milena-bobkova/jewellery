@@ -48,6 +48,10 @@
     width: 442px;
     box-sizing: border-box;
 
+    left: calc(50% - 221px);
+    top: 50px;
+    transform: none;
+
     &--opened {
       display: block;
     }
@@ -69,6 +73,9 @@
 
   @include mobile {
     width: 280px;
+
+    left: calc(50% - 140px);
+    top: 60px;
   }
 }
 
@@ -134,8 +141,11 @@
 
   position: relative;
 
-  width: 15px;
-  height: 10px;
+  width: 18px;
+  height: 15px;
+
+  border: none;
+  background-color: transparent;
 
   &::before {
     @include pseudo;
@@ -243,6 +253,16 @@
     span {
       padding: 0 0 0 15px;
     }
+  }
+}
+
+input[name="filter"] {
+  width: 15px;
+  height: 15px;
+  border: none;
+
+  &:focus + .catalog__filter__check-field::before {
+    outline: 1px solid $brown;
   }
 }
 

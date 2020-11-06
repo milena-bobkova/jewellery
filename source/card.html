@@ -11,34 +11,6 @@
   <link rel="preload" href="fonts/Poppins-Regular.woff" as="font">
   <link href="css/style.min.css" rel="stylesheet">
 
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* По умолчанию показывается мобильный макет */
-      background-image: url("js/pixel-glass/preview/card-mobile.jpg");
-    }
-
-    /* Планшет */
-    @media (min-width: 768px) {
-      HTML {
-        /* Планшетный макет */
-        background-image: url("js/pixel-glass/preview/card-tablet.jpg");
-      }
-    }
-
-    /* Десктоп */
-    @media (min-width: 1024px) {
-      HTML {
-        /* Десктопный макет */
-        background-image: url("js/pixel-glass/preview/card-desktop.jpg");
-      }
-    }
-  </style>
-  <link href="js/pixel-glass/styles.css" rel="stylesheet">
-  <script src="js/pixel-glass/script.js"></script>
-  <!-- // Pixel Glass -->
 </head>
 
 <body>
@@ -56,7 +28,7 @@
         <a href="index.html" class="page-header__logo page-header__logo--catalog">
           <img src="img/logo.svg" width="66" height="66" alt="Online store logo">
         </a>
-        <a href="#" class="page-header__login modal-open">Login</a>
+        <a href="#" class="page-header__login modal-open login-open">Login</a>
         <nav class="page-header__navigation page-header__navigation--catalog">
           <div class="page-header__catalog-menu">
             <a href="#" class="page-header__link page-header__link--catalog">What’s new</a>
@@ -546,7 +518,7 @@
   <div class="overlay overlay--login login-overlay"></div>
   <section class="login modal modal--login">
     <div class="login__bg-wrap">
-      <button type="button" class="login__close modal-close login-close" aria-label="Close">
+      <button type="button" class="login__close modal-close login-close" aria-label="Close" tabindex="6">
         <svg class="login__close-icon" width="14" height="14">
           <use xlink:href="img/sprite.svg#modal-close-icon"></use>
         </svg>
@@ -557,19 +529,19 @@
       <form class="login__form" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru"
         autocomplete="off">
         <label for="email-id" aria-label="User email">
-          <input id="email-id" type="email" name="user-email" placeholder="Your E-mail">
+          <input id="email-id" type="email" name="user-email" placeholder="Your E-mail" tabindex="1">
         </label>
         <div class="login__password-wrap">
           <label for="password-id" aria-label="User password">
-            <input id="password-id" type="password" name="user-password" placeholder="Password">
+            <input id="password-id" type="password" name="user-password" placeholder="Password" tabindex="2">
           </label>
-          <a href="#" class="login__forgot" aria-label="Forgot your password?">Forgot your password?</a>
+          <a href="#" class="login__forgot" aria-label="Forgot your password?" tabindex="3">Forgot your password?</a>
         </div>
-        <button class="login__submit button" type="submit" aria-label="Log in">Log in</button>
+        <button class="login__submit button" type="submit" aria-label="Log in" tabindex="4">Log in</button>
       </form>
       <div class="login__info">
         <p>Don’t have an account?
-          <a href="#" class="login__sign-up" aria-label="Sign up">Sign up</a>
+          <a href="#" class="login__sign-up" aria-label="Sign up" tabindex="5">Sign up</a>
         </p>
       </div>
     </div>
@@ -616,7 +588,7 @@
             <input type="text" name="duration" value="1" id="num-duration" tabindex="2">
           </label>
           <button class="add__button" type="button" aria-label="Reduce" tabindex="3">
-            <svg class="add__icon modal-add__icon--minus" width="14" height="2">
+            <svg class="add__icon add__icon--minus" width="14" height="2">
               <use xlink:href="img/sprite.svg#minus-icon"></use>
             </svg>
           </button>

@@ -2,11 +2,6 @@
 
 (function () {
 
-  var modals = document.querySelectorAll('.modal');
-  var modalOverlays = document.querySelectorAll('.overlay');
-  var modalOpenButtons = document.querySelectorAll('.modal-open');
-  var modalCloseButtons = document.querySelectorAll('.modal-close');
-
   var loginForm = document.querySelector('.login__form');
   var userEmail = document.querySelector('[name=user-email]');
 
@@ -111,7 +106,7 @@
   var loginCloseButton = document.querySelector('.login-close');
 
   var showLogin = function () {
-    if (loginOpenButton !== null && loginCloseButton !== null && modalLogin !== 0 && modalLogin.childNodes.length > 0 && loginOverlay !== 0) {
+    if (loginOpenButton !== null && loginCloseButton !== null && modalLogin !== null && modalLogin.childNodes.length > 0 && loginOverlay !== null) {
       openModalHandler(loginOpenButton, modalLogin, loginOverlay);
       closeModalHandler(loginCloseButton, modalLogin, loginOverlay);
     }
@@ -122,11 +117,16 @@
   var filterOpenButton = document.querySelector('.filter-open');
   var filterCloseButton = document.querySelector('.filter-close');
 
-  modalFilter.classList.remove('catalog__filter--nojs');
-  filterOpenButton.classList.remove('catalog__filter-btn--nojs');
+  if (modalFilter !== null && modalFilter.classList.contains('catalog__filter--nojs')) {
+    modalFilter.classList.remove('catalog__filter--nojs');
+  }
+
+  if (filterOpenButton !== null) {
+    filterOpenButton.classList.remove('catalog__filter-btn--nojs');
+  }
 
   var showFilter = function () {
-    if (filterOpenButton !== null && filterCloseButton !== null && modalFilter !== 0 && modalFilter.childNodes.length > 0 && filterOverlay !== 0) {
+    if (filterOpenButton !== null && filterCloseButton !== null && modalFilter !== null && modalFilter.childNodes.length > 0 && filterOverlay !== null) {
       openModalHandler(filterOpenButton, modalFilter, filterOverlay);
       closeModalHandler(filterCloseButton, modalFilter, filterOverlay);
     }
@@ -138,7 +138,7 @@
   var addCloseButton = document.querySelector('.add-close');
 
   var showAdd = function () {
-    if (addOpenButton !== null && addCloseButton !== null && modalAdd !== 0 && modalAdd.childNodes.length > 0 && addOverlay !== 0) {
+    if (addOpenButton !== null && addCloseButton !== null && modalAdd !== null && modalAdd.childNodes.length > 0 && addOverlay !== null) {
       openModalHandler(addOpenButton, modalAdd, addOverlay);
       closeModalHandler(addCloseButton, modalAdd, addOverlay);
     }

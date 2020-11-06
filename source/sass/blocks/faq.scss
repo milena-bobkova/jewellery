@@ -21,7 +21,7 @@
   }
 
   @include mobile {
-    padding: 0 0 60px 0;
+    padding: 0 0 62px 0;
 
     h2 {
       margin: 0 0 27px 0;
@@ -34,7 +34,7 @@
 }
 
 .faq__item {
-  padding: 43px 50px 35px 44px;
+  padding: 43px 50px 36px 44px;
   border: 1px solid $brown;
   border-bottom: none;
 
@@ -76,7 +76,7 @@
     padding: 19px 22px 3px 24px;
 
     &:first-of-type {
-      padding: 19px 22px 17px 24px;
+      padding: 18px 22px 17px 24px;
     }
 
     p {
@@ -118,7 +118,17 @@
 .faq__button {
   @include reset;
 
+  margin: 8px 0 0 0;
+
   position: relative;
   background-color: transparent;
   border: none;
+
+  @include tablet {
+    margin: 3px 0 0 0;
+  }
+
+  @include tablet {
+    margin: 0;
+  }
 }

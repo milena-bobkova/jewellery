@@ -4,7 +4,7 @@
   width: 100%;
 
   &--card {
-    padding: 87px 0 113px;
+    padding: 90px 0 113px;
   }
 
   h2 {
@@ -102,7 +102,7 @@
 }
 
 .promo__item {
-  margin: 55px 2.56% 53px 0;
+  margin: 55px 2.56% 51px 0;
 
   width: 23.08%;
   display: flex;
@@ -110,7 +110,7 @@
   justify-content: center;
 
   &:nth-of-type(4n) {
-    margin: 55px 0 53px;
+    margin: 55px 0 51px;
   }
 
   @include tablet {
