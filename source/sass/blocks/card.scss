@@ -39,7 +39,7 @@
 
   @include mobile {
     position: relative;
-    margin: 0 0 40px 0;
+    margin: 0 0 26px 0;
     padding: 0;
     width: 100%;
   }
@@ -50,14 +50,23 @@
   width: 16.67%;
 
   @include tablet {
+    margin: 0;
     width: 100%;
     display: flex;
+    justify-content: space-between;
   }
 }
 
 .card__photo-wrap {
   margin: 0 0 30px 0;
   width: 100%;
+
+  @include tablet {
+    margin: 0;
+    width: 30.40%;
+    display: flex;
+    justify-content: flex-start;
+  }
 
   @include mobile {
     display: none;
@@ -68,8 +77,13 @@
   width: 78.33%;
 
   @include tablet {
+    margin: 0 0 14px 0;
     width: 100%;
     order: -1;
+  }
+
+  @include mobile {
+    position: relative;
   }
 }
 
@@ -84,8 +98,6 @@
     height: 129px;
 
     &--big {
-      margin: 0 0 14px 0;
-
       width: 319px;
       height: 286px;
     }
@@ -107,7 +119,7 @@
   @include mobile {
     @include text(500, 14px, 18.2px);
     position: absolute;
-    bottom: 6px;
+    bottom: 20px;
     left: 128px;
     display: block;
   }
@@ -133,7 +145,7 @@
     @include reset;
     @include text(400, 26px, 33.8px);
 
-    margin: 0 0 10.21% 0;
+    margin: 0 0 40px 0;
     width: 78.73%;
 
     color: $dark;
@@ -144,7 +156,7 @@
     width: 47.06%;
 
     p {
-      margin: 0 0 15.21% 0;
+      margin: 0 0 40px 0;
     }
   }
 
@@ -160,19 +172,25 @@
 .card__info-list {
   @include reset;
 
-  margin: 0 0 5.32% 0;
+  margin: 0 0 22px 0;
   width: 78.73%;
 
   display: flex;
   justify-content: space-between;
 
   &:first-of-type {
-    margin: 0 0 8.65% 0;
+    margin: 0 0 30px 0;
     justify-content: flex-start;
   }
 
-  @include mobile {
+  @include tablet {
     width: 100%;
+  }
+
+  @include mobile {
+    &:first-of-type {
+      margin: 0 0 32px 0;
+    }
   }
 }
 
@@ -210,12 +228,12 @@
   width: 78.73%;
 
   @include tablet {
-    margin: 18.8% 0 6.19% 0;
+    margin: 62px 0 14px 0;
+    width: 100%;
   }
 
   @include mobile {
     margin: 52px 0 12px 0;
-    width: 100%;
   }
 }
 
@@ -240,13 +258,16 @@
   }
 
   @include tablet {
+    width: 100%;
+
     p {
       @include text(500, 12px, 15.6px);
+      margin: 0 7.5% 0 0;
     }
   }
 
   @include mobile {
-    width: 100%;
+    width: 98.7%;
     justify-content: space-between;
 
     p {

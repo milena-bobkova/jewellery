@@ -3,6 +3,10 @@
 
   width: 100%;
 
+  &--card {
+    padding: 87px 0 113px;
+  }
+
   h2 {
     line-height: 100%;
   }
@@ -52,7 +56,9 @@
 }
 
 .promo__link-item {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   &:hover {
     opacity: 0.7;
@@ -65,7 +71,7 @@
 }
 
 .promo__arrow-wrap {
-  margin: -5px 0 6px 0;
+  margin: -5px 0 5px 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -96,48 +102,58 @@
 }
 
 .promo__item {
-  margin: 55px 2.56% 50px 0;
+  margin: 55px 2.56% 53px 0;
 
   width: 23.08%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   &:nth-of-type(4n) {
-    margin: 55px 0 50px;
+    margin: 55px 0 53px;
   }
 
   @include tablet {
-    margin: 55px 4.42% 43px 0;
+    margin: 55px 4.42% 42px 0;
     width: 47.79%;
 
     &:nth-of-type(2n) {
-      margin: 55px 0 43px;
+      margin: 55px 0 42px;
     }
   }
 
   @include mobile {
-    margin: 55px 10.34% 33px 0;
+    margin: 55px 10.34% 35px 0;
     width: 44.83%;
 
     &:nth-of-type(2n) {
-      margin: 55px 0 33px;
+      margin: 55px 0 35px;
     }
   }
 }
 
-.promo__picture {
+.promo__picture-wrap {
   margin: 0 0 23px 0;
+  display: flex;
+  justify-content: center;
+
+  @include mobile {
+    margin: 0 0 18px 0;
+  }
+}
+
+.promo__picture {
   display: block;
 
   max-width: 100%;
   height: auto;
 
   @include tablet {
-    margin: 0 0 15px 0;
     width: 324px;
     height: 340px;
   }
 
   @include mobile {
-    margin: 0 0 12px 0;
     width: 130px;
     height: 136px;
   }
@@ -148,7 +164,7 @@
 }
 
 .promo__pagination {
-  width: 51px;
+  width: 53px;
 
   @include tablet {
     width: 118px;

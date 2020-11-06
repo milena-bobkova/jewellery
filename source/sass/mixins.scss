@@ -21,6 +21,12 @@
   position: $position;
 }
 
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (max-width: $tablet-max) {
     @content;

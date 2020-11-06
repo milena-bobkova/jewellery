@@ -12,6 +12,5 @@
 .item__price {
   @include text(700, 14px, 130%);
 
-  margin: 0 0 20px 0;
   color: $dark;
 }

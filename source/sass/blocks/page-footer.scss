@@ -47,7 +47,7 @@
   }
 
   @include mobile {
-    margin: 0 0 50px 0;
+    margin: 0 0 57px 0;
     width: 100%;
   }
 }
@@ -88,7 +88,7 @@
 
   @include mobile {
     h3 {
-      margin: 0 0 15px 0;
+      margin: 0 0 14px 0;
       letter-spacing: 0.03em;
 
       span {
@@ -141,7 +141,7 @@
 
   @include tablet {
     input {
-      width: 81%;
+      width: 80%;
     }
   }
 
@@ -187,6 +187,14 @@
     background-image: url("../img/arrow-right-white.svg");
     background-repeat: no-repeat;
   }
+
+  @include tablet {
+    padding: 0 45px 0 0;
+  }
+
+  @include mobile {
+    margin: 0 -5px 0 0;
+  }
 }
 
 .page-footer__lists {
@@ -194,6 +202,10 @@
 
   display: flex;
   justify-content: space-between;
+
+  &--catalog {
+    width: 49.74%;
+  }
 
   @include tablet {
     width: 100%;
@@ -212,7 +224,7 @@
   text-align: left;
 
   &--catalog {
-    width: 14.5%;
+    width: 42.3%;
   }
 
   @include tablet {
@@ -222,7 +234,7 @@
   }
 
   @include mobile {
-    margin: 0 0 50px 0;
+    margin: 0 0 42px 0;
     width: 100%;
   }
 }
@@ -236,17 +248,22 @@
   width: 35.42%;
 
   &--catalog {
-    width: 11.4%;
+    margin: 8px 0 0 8px;
+    width: 38.5%;
   }
 
   @include tablet {
     width: 18%;
 
     flex-grow: 4.5;
+
+    &--catalog {
+      margin: 8px 0 0 0;
+    }
   }
 
   @include mobile {
-    margin: 0 0 50px 0;
+    margin: 0 0 45px 0;
     width: 100%;
   }
 }

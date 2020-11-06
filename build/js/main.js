@@ -118,6 +118,8 @@
   var menu = document.querySelector('.page-header');
   var toggle = document.querySelector('.page-header__toggle');
 
+  menu.classList.remove('page-header--nojs');
+
   var closeMenu = function () {
     menu.classList.add('page-header--closed');
     menu.classList.remove('page-header--opened');
@@ -290,6 +292,9 @@
   var filterOverlay = document.querySelector('.filter-overlay');
   var filterOpenButton = document.querySelector('.filter-open');
   var filterCloseButton = document.querySelector('.filter-close');
+
+  modalFilter.classList.remove('catalog__filter--nojs');
+  filterOpenButton.classList.remove('catalog__filter-btn--nojs');
 
   var showFilter = function () {
     if (filterOpenButton !== null && filterCloseButton !== null && modalFilter !== 0 && modalFilter.childNodes.length > 0 && filterOverlay !== 0) {

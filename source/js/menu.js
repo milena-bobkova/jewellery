@@ -5,6 +5,8 @@
   var menu = document.querySelector('.page-header');
   var toggle = document.querySelector('.page-header__toggle');
 
+  menu.classList.remove('page-header--nojs');
+
   var closeMenu = function () {
     menu.classList.add('page-header--closed');
     menu.classList.remove('page-header--opened');

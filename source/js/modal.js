@@ -122,6 +122,9 @@
   var filterOpenButton = document.querySelector('.filter-open');
   var filterCloseButton = document.querySelector('.filter-close');
 
+  modalFilter.classList.remove('catalog__filter--nojs');
+  filterOpenButton.classList.remove('catalog__filter-btn--nojs');
+
   var showFilter = function () {
     if (filterOpenButton !== null && filterCloseButton !== null && modalFilter !== 0 && modalFilter.childNodes.length > 0 && filterOverlay !== 0) {
       openModalHandler(filterOpenButton, modalFilter, filterOverlay);
