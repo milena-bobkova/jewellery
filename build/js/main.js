@@ -12,8 +12,8 @@
   var dropdownHandler = function (button, item) {
     button.addEventListener('click', function (evt) {
       evt.preventDefault();
-      item.classList.toggle('dropdown__item--opened')
-      button.classList.toggle('dropdown__button--opened')
+      item.classList.toggle('dropdown__item--opened');
+      button.classList.toggle('dropdown__button--opened');
     });
   };
 
@@ -36,7 +36,7 @@
 (function () {
 
   var filterClear = document.querySelector('.catalog__filter-clear');
-  var form = document.querySelector('.catalog__filter-form');
+  var formFilter = document.querySelector('.catalog__filter-form');
   var inputs = document.querySelectorAll('[name=filter]');
 
   var clearForm = function (button, form) {
@@ -47,9 +47,13 @@
         for (var i = 0; i < inputs.length; i++) {
           var fieldType = inputs[i].type.toLowerCase();
 
+          var setFieldValue = function (field) {
+            return field.valie === '';
+          };
+
           switch (fieldType) {
             case 'number':
-              inputs[i].value === "";
+              setFieldValue(inputs[i]);
               break;
 
             case 'checkbox':
@@ -66,7 +70,7 @@
     }
   };
 
-  clearForm(filterClear, form);
+  clearForm(filterClear, formFilter);
 
 })();
 
@@ -241,7 +245,7 @@
       openModalHandler(loginOpenButton, modalLogin, loginOverlay);
       closeModalHandler(loginCloseButton, modalLogin, loginOverlay);
     }
-  }
+  };
 
   var modalFilter = document.querySelector('.filter');
   var filterOverlay = document.querySelector('.filter-overlay');
@@ -261,7 +265,7 @@
       openModalHandler(filterOpenButton, modalFilter, filterOverlay);
       closeModalHandler(filterCloseButton, modalFilter, filterOverlay);
     }
-  }
+  };
 
   var modalAdd = document.querySelector('.add');
   var addOverlay = document.querySelector('.add-overlay');
@@ -273,7 +277,7 @@
       openModalHandler(addOpenButton, modalAdd, addOverlay);
       closeModalHandler(addCloseButton, modalAdd, addOverlay);
     }
-  }
+  };
 
   showLogin();
   showFilter();
@@ -285,7 +289,7 @@
 
 (function () {
 
-  var swiper = new Swiper('.swiper-container', {
+  var swiperSlide = new Swiper('.swiper-container', {
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {

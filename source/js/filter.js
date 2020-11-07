@@ -3,7 +3,7 @@
 (function () {
 
   var filterClear = document.querySelector('.catalog__filter-clear');
-  var form = document.querySelector('.catalog__filter-form');
+  var formFilter = document.querySelector('.catalog__filter-form');
   var inputs = document.querySelectorAll('[name=filter]');
 
   var clearForm = function (button, form) {
@@ -14,9 +14,13 @@
         for (var i = 0; i < inputs.length; i++) {
           var fieldType = inputs[i].type.toLowerCase();
 
+          var setFieldValue = function (field) {
+            return field.valie === '';
+          };
+
           switch (fieldType) {
             case 'number':
-              inputs[i].value === "";
+              setFieldValue(inputs[i]);
               break;
 
             case 'checkbox':
@@ -33,6 +37,6 @@
     }
   };
 
-  clearForm(filterClear, form);
+  clearForm(filterClear, formFilter);
 
 })();

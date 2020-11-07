@@ -2,7 +2,7 @@
 
 (function () {
 
-  var swiper = new Swiper('.swiper-container', {
+  var swiperSlide = new Swiper('.swiper-container', {
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {

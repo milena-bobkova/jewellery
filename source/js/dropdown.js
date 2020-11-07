@@ -12,8 +12,8 @@
   var dropdownHandler = function (button, item) {
     button.addEventListener('click', function (evt) {
       evt.preventDefault();
-      item.classList.toggle('dropdown__item--opened')
-      button.classList.toggle('dropdown__button--opened')
+      item.classList.toggle('dropdown__item--opened');
+      button.classList.toggle('dropdown__button--opened');
     });
   };
 

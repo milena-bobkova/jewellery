@@ -1,6 +1,12 @@
+/* eslint-disable */
+/*stylelint-disable*/
+
 'use strict';
 
 (function () {
+
+  // Picture element HTML5 shiv
+  document.createElement("picture");
 
   /*! picturefill - v3.0.2 - 2016-02-12
    * https://scottjehl.github.io/picturefill/
@@ -1561,6 +1567,7 @@
  * Released on: October 30, 2020
  */
 
+
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :
@@ -1615,6 +1622,7 @@
    */
 
   /* eslint-disable no-param-reassign */
+
   function isObject(obj) {
     return obj !== null && typeof obj === 'object' && 'constructor' in obj && obj.constructor === Object;
   }

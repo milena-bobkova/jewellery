@@ -110,7 +110,7 @@
       openModalHandler(loginOpenButton, modalLogin, loginOverlay);
       closeModalHandler(loginCloseButton, modalLogin, loginOverlay);
     }
-  }
+  };
 
   var modalFilter = document.querySelector('.filter');
   var filterOverlay = document.querySelector('.filter-overlay');
@@ -130,7 +130,7 @@
       openModalHandler(filterOpenButton, modalFilter, filterOverlay);
       closeModalHandler(filterCloseButton, modalFilter, filterOverlay);
     }
-  }
+  };
 
   var modalAdd = document.querySelector('.add');
   var addOverlay = document.querySelector('.add-overlay');
@@ -142,7 +142,7 @@
       openModalHandler(addOpenButton, modalAdd, addOverlay);
       closeModalHandler(addCloseButton, modalAdd, addOverlay);
     }
-  }
+  };
 
   showLogin();
   showFilter();
