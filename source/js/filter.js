@@ -15,7 +15,7 @@
           var fieldType = inputs[i].type.toLowerCase();
 
           var setFieldValue = function (field) {
-            return field.valie === '';
+            return field.value === '';
           };
 
           switch (fieldType) {

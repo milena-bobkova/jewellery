@@ -1,6 +1,12 @@
+/* eslint-disable */
+/*stylelint-disable*/
+
 'use strict';
 
 (function () {
+
+  // Picture element HTML5 shiv
+  document.createElement("picture");
 
   /*! picturefill - v3.0.2 - 2016-02-12
    * https://scottjehl.github.io/picturefill/
@@ -1561,6 +1567,7 @@
  * Released on: October 30, 2020
  */
 
+
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :
@@ -1615,6 +1622,7 @@
    */
 
   /* eslint-disable no-param-reassign */
+
   function isObject(obj) {
     return obj !== null && typeof obj === 'object' && 'constructor' in obj && obj.constructor === Object;
   }
@@ -10975,58 +10983,6 @@
   Swiper.use(components);
 
   return Swiper;
-
-  'use strict';
-
-  (function () {
-
-    var swiper = new Swiper('.swiper-container', {
-      loop: true,
-      loopFillGroupWithBlank: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        type: 'bullets',
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + '</span>';
-        },
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        // when window width is >= 1024px
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 30,
-          slidesPerGroup: 4,
-        },
-        // when window width is >= 768px
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 30,
-          slidesPerGroup: 2,
-          pagination: {
-            type: 'bullets',
-          },
-        },
-        // when window width is >= 320px
-        320: {
-          slidesPerView: 2,
-          spaceBetween: 30,
-          slidesPerGroup: 2,
-          pagination: {
-            type: 'custom',
-            renderCustom: function (swiper, current, total) {
-              return current + ' of ' + total;
-            },
-          },
-        },
-      },
-    });
-
-  })();
 
 })));
 //# sourceMappingURL=swiper-bundle.js.map

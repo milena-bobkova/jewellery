@@ -2,7 +2,7 @@
 
 (function () {
 
-  var swiperSlide = new Swiper('.swiper-container', {
+  var slider = {
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {
@@ -46,6 +46,12 @@
         },
       },
     },
-  });
+  };
+
+  var astivateSlider = function () {
+    slider = new window.Swiper('.swiper-container', slider);
+  };
+
+  astivateSlider();
 
 })();

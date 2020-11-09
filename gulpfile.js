@@ -15,7 +15,8 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 var server = require("browser-sync").create();
-var concat = require('gulp-concat');
+var concat = require('gulp-concat-util');
+var replace = require('gulp-replace');
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -74,7 +75,10 @@ gulp.task("html", function () {
 
 gulp.task("js", function () {
   return gulp.src(["source/js/*.js", "!source/js/vendor.js"])
+    .pipe(replace(/'use strict';/g, ''))
+    .pipe(replace(/^\s*\n/mg, ''))
     .pipe(concat("main.js"))
+    .pipe(concat.header('\'use strict\';\n\n'))
     .pipe(gulp.dest("build/js"));
 });
 
