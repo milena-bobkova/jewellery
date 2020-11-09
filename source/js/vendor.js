@@ -10985,7 +10985,7 @@
     return Swiper;
 
   })));
-  //# sourceMappingURL=swiper-bundle.js.map
 
   window.Swiper = Swiper
 })();
+//# sourceMappingURL=swiper-bundle.js.map
