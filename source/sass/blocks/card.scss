@@ -239,6 +239,7 @@
 
 .card__conditions {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
 
   width: 78.73%;
@@ -247,13 +248,21 @@
     @include reset;
     @include text(500, 14px, 130%);
 
-    margin: 0 5.74% 0 0;
+    margin: 0 7.29% 0 0;
+
     white-space: nowrap;
+    width: 31.89%;
+
 
     color: $grey;
 
+    &:first-of-type {
+      width: 27.56%
+    }
+
     &:last-of-type {
       margin: 0;
+      width: 25.94%
     }
   }
 
@@ -263,6 +272,15 @@
     p {
       @include text(500, 12px, 15.6px);
       margin: 0 7.5% 0 0;
+
+      &:first-of-type {
+        width: 27.3%
+      }
+
+      &:last-of-type {
+        margin: 0;
+        width: 25.7%
+      }
     }
   }
 

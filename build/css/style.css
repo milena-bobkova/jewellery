@@ -2712,6 +2712,8 @@ input[name="filter"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -2722,11 +2724,15 @@ input[name="filter"] {
     font-weight: 500;
     font-size: 14px;
     line-height: 130%;
-    margin: 0 5.74% 0 0;
+    margin: 0 7.29% 0 0;
     white-space: nowrap;
+    width: 31.89%;
     color: #9b9997; }
+    .card__conditions p:first-of-type {
+      width: 27.56%; }
     .card__conditions p:last-of-type {
-      margin: 0; }
+      margin: 0;
+      width: 25.94%; }
   @media (max-width: 1023px) {
     .card__conditions {
       width: 100%; }
@@ -2734,7 +2740,12 @@ input[name="filter"] {
         font-weight: 500;
         font-size: 12px;
         line-height: 15.6px;
-        margin: 0 7.5% 0 0; } }
+        margin: 0 7.5% 0 0; }
+        .card__conditions p:first-of-type {
+          width: 27.3%; }
+        .card__conditions p:last-of-type {
+          margin: 0;
+          width: 25.7%; } }
   @media (max-width: 767px) {
     .card__conditions {
       width: 98.7%;
@@ -2957,7 +2968,12 @@ input[name="filter"] {
   width: 14px;
   height: 14px;
   border: none;
-  background-color: transparent; }
+  background-color: transparent;
+  cursor: pointer; }
+  .add__close:hover, .add__close:focus {
+    opacity: 0.7; }
+  .add__close:active {
+    opacity: 0.3; }
   @media (max-width: 767px) {
     .add__close {
       top: 15px;
@@ -3037,7 +3053,10 @@ input[name="filter"] {
     font-family: inherit;
     width: 14px;
     border: none;
-    text-align: center; }
+    text-align: center;
+    cursor: pointer; }
+    .add__quantity input:hover, .add__quantity input:focus {
+      outline: 1px solid #a87b62; }
   @media (max-width: 767px) {
     .add__quantity {
       margin: 3px 0 0 0; }
@@ -3051,7 +3070,12 @@ input[name="filter"] {
   margin: 0;
   width: 14px;
   border: none;
-  background-color: transparent; }
+  background-color: transparent;
+  cursor: pointer; }
+  .add__button:hover, .add__button:focus {
+    opacity: 0.7; }
+  .add__button:active {
+    opacity: 0.3; }
 
 .add__text {
   margin: 0 0 37px 0;
