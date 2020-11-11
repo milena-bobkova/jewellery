@@ -1396,7 +1396,8 @@ a {
     bottom: 0;
     padding: 0 10%;
     width: 50%;
-    min-height: 50%; }
+    height: 50%;
+    max-height: 315px; }
   .blog__article-info p {
     padding: 0;
     margin: 0;
@@ -2038,13 +2039,15 @@ a {
 
 .catalog__filter {
   width: 21.37%;
-  z-index: 15; }
+  z-index: 15;
+  position: static; }
   @media (max-width: 1023px) {
     .catalog__filter {
       background-color: #ffffff;
       width: 442px;
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
+      position: fixed;
       left: calc(50% - 221px);
       top: 50px;
       -webkit-transform: none;

@@ -42,11 +42,13 @@
   width: 21.37%;
 
   z-index: 15;
+  position: static;
 
   @include tablet {
     background-color: $white;
     width: 442px;
     box-sizing: border-box;
+    position: fixed;
 
     left: calc(50% - 221px);
     top: 50px;
