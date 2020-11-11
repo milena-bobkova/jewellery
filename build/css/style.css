@@ -2798,7 +2798,12 @@ input[name="filter"] {
   width: 20px;
   height: 20px;
   border: none;
-  background-color: transparent; }
+  background-color: transparent;
+  cursor: pointer; }
+  .login__close:hover, .login__close:focus {
+    opacity: 0.7; }
+  .login__close:active {
+    opacity: 0.3; }
   @media (max-width: 1023px) {
     .login__close {
       right: 32px; } }
