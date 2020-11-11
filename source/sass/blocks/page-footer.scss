@@ -137,6 +137,12 @@
     color: $grey;
     font-family: "Poppins", "Arial", sans-serif;
     text-align: left;
+    border-radius: 0;
+
+    &:hover,
+    &:focus {
+      outline: 1px solid $white;
+    }
   }
 
   @include tablet {

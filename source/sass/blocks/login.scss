@@ -124,6 +124,11 @@
     border: none;
     border-bottom: 1px solid $dark;
     border-radius: 0;
+
+    &:hover,
+    &:focus {
+      outline: 1px solid $brown;
+    }
   }
 
   @include mobile {
@@ -139,6 +144,11 @@
   input {
     margin: 0 0 4px 0;
     border-radius: 0;
+
+    &:hover,
+    &:focus {
+      outline: 1px solid $brown;
+    }
   }
 
   @include mobile {

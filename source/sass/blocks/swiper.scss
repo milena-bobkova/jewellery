@@ -159,7 +159,7 @@ $colors: (
 
 .swiper-pagination-bullet {
   @include text(500, 16px, 130%);
-  width: 8px;
+  width: 10px;
   text-align: center;
   color: $grey;
   opacity: 1;

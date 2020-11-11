@@ -14,6 +14,10 @@
 </head>
 
 <body>
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
   <header class="page-header page-header--closed page-header--nojs">
     <div class="page-header__container">
       <div class="page-header__wrap">
@@ -45,7 +49,7 @@
         </nav>
         <a href="#" class="page-header__cart">
           <svg width="20" height="18">
-            <use xlink:href="img/sprite.svg#cart-icon"></use>
+            <use xlink:href="#cart-icon"></use>
           </svg>
           <span>Cart</span>
           <span>0</span>
@@ -67,12 +71,12 @@
           <div class="promo__arrow-wrap">
             <a href="#" class="promo__prev swiper-button-prev" aria-label="flip left">
               <svg class="promo__arrow" width="28" height="11">
-                <use xlink:href="img/sprite.svg#arrow-left-icon"></use>
+                <use xlink:href="#arrow-left-icon"></use>
               </svg>
             </a>
             <a href="#" class="promo__next swiper-button-next" aria-label="flip right">
               <svg class="promo__arrow" width="28" height="11">
-                <use xlink:href="img/sprite.svg#arrow-right-icon"></use>
+                <use xlink:href="#arrow-right-icon"></use>
               </svg>
             </a>
           </div>
@@ -653,7 +657,7 @@
             <a href="#" class="page-footer__link link page-footer__link--social" aria-label="Facebook">
               <div class="page-footer__svg-wrap">
                 <svg class="page-footer__svg page-footer__svg--fb" width="8" height="15">
-                  <use xlink:href="img/sprite.svg#facebook-icon"></use>
+                  <use xlink:href="#facebook-icon"></use>
                 </svg>
               </div>
               <span>Facebook</span>
@@ -663,7 +667,7 @@
             <a href="#" class="page-footer__link page-footer__link--social" aria-label="Instagram">
               <div class="page-footer__svg-wrap">
                 <svg class="page-footer__svg page-footer__svg--ig" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#instagram-icon"></use>
+                  <use xlink:href="#instagram-icon"></use>
                 </svg>
               </div>
               <span>Instagram</span>
@@ -673,7 +677,7 @@
             <a href="#" class="page-footer__link link page-footer__link--social" aria-label="Pinterest">
               <div class="page-footer__svg-wrap">
                 <svg class="page-footer__svg page-footer__svg--pt" width="15" height="15">
-                  <use xlink:href="img/sprite.svg#pinterest-icon"></use>
+                  <use xlink:href="#pinterest-icon"></use>
                 </svg>
               </div>
               <span>Pinterest</span>
@@ -683,7 +687,7 @@
             <a href="#" class="page-footer__link link page-footer__link--social" aria-label="Twitter">
               <div class="page-footer__svg-wrap">
                 <svg class="page-footer__svg page-footer__svg--tw" width="15" height="13">
-                  <use xlink:href="img/sprite.svg#twitter-icon"></use>
+                  <use xlink:href="#twitter-icon"></use>
                 </svg>
               </div>
               <span>Twitter</span>
@@ -699,7 +703,7 @@
     <div class="login__bg-wrap">
       <button type="button" class="login__close modal-close login-close" aria-label="Close" tabindex="6">
         <svg class="login__close-icon" width="14" height="14">
-          <use xlink:href="img/sprite.svg#modal-close-icon"></use>
+          <use xlink:href="#modal-close-icon"></use>
         </svg>
       </button>
     </div>
@@ -708,7 +712,8 @@
       <form class="login__form" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru"
         autocomplete="off">
         <label for="email-id" aria-label="User email">
-          <input id="email-id" type="email" name="user-email" placeholder="Your E-mail" tabindex="1" maxlength="30">
+          <input id="email-id" type="email" name="user-email" placeholder="Your E-mail" tabindex="1" maxlength="30"
+            required>
         </label>
         <div class="login__password-wrap">
           <label for="password-id" aria-label="User password">

@@ -169,6 +169,12 @@
   color: $grey;
 
   border: none;
+  border-radius: 0;
+
+  &:hover,
+  &:focus {
+    outline: 1px solid $black;
+  }
 }
 
 .page-header__logo {

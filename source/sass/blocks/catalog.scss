@@ -90,6 +90,16 @@
 
     background-color: transparent;
     border: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   @include mobile {
@@ -152,7 +162,7 @@
     top: 5px;
     left: 2px;
 
-    width: 15px;
+    width: 17px;
     height: 10px;
     background-image: url("../img/arrow-down-icon.svg");
     background-repeat: no-repeat;
@@ -160,12 +170,12 @@
   }
 
   @include tablet {
-    width: 23px;
-    height: 12px;
+    width: 24px;
+    height: 13px;
 
     &::before {
-      width: 23px;
-      height: 12px;
+      width: 24px;
+      height: 13px;
       background-image: url("../img/arrow-down-icon-tablet.svg");
     }
   }
@@ -554,6 +564,7 @@ input[name="filter"] {
   @include text(500, 16px, 130%);
 
   cursor: pointer;
+  color: $dark;
 
   &:hover {
     opacity: 0.7;

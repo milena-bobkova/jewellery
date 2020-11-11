@@ -10989,5 +10989,3 @@
   window.Swiper = Swiper
 })();
 //# sourceMappingURL=swiper-bundle.js.map
-
-
