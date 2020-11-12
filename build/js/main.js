@@ -28,8 +28,8 @@
 })();
 
 (function () {
-  var filterClear = document.querySelector('.catalog__filter-clear');
   var formFilter = document.querySelector('.catalog__filter-form');
+  var filterClear = document.querySelector('.catalog__filter-clear');
   var inputs = document.querySelectorAll('[name=filter]');
   var clearForm = function (button, form) {
     if (button !== null && form !== null && form.childNodes.length > 0 && inputs.length > 0) {
@@ -88,7 +88,7 @@
     toggle.addEventListener('click', toggleClickHandler);
     toggle.addEventListener('keydown', function (evt) {
       if (evt.key === 'Enter') {
-        openModal();
+        openMenu();
       }
     });
   }

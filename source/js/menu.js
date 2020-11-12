@@ -36,7 +36,7 @@
 
     toggle.addEventListener('keydown', function (evt) {
       if (evt.key === 'Enter') {
-        openModal();
+        openMenu();
       }
     });
   }

@@ -2,8 +2,8 @@
 
 (function () {
 
-  var filterClear = document.querySelector('.catalog__filter-clear');
   var formFilter = document.querySelector('.catalog__filter-form');
+  var filterClear = document.querySelector('.catalog__filter-clear');
   var inputs = document.querySelectorAll('[name=filter]');
 
   var clearForm = function (button, form) {
