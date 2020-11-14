@@ -178,48 +178,72 @@
   display: flex;
   justify-content: space-between;
 
-  &:first-of-type {
-    margin: 0 0 30px 0;
-    justify-content: flex-start;
+  @include tablet {
+    width: 100%;
   }
+}
+
+.card__info-tabs {
+  margin: 0 0 30px 0;
+  width: 78.73%;
+
+  display: flex;
+  justify-content: flex-start;
 
   @include tablet {
     width: 100%;
   }
 
   @include mobile {
-    &:first-of-type {
-      margin: 0 0 32px 0;
-    }
+    margin: 0 0 32px 0;
+  }
+}
+
+.card__info-list-link {
+  @include text(500, 16px, 130%);
+
+  margin: 0 35px 0 0;
+  color: $dark;
+
+  &--active {
+    color: $grey
+  }
+
+  @include mobile {
+    margin: 0 38px 0 0;
   }
 }
 
 .card__info-list-dt {
-  &--big {
-    @include text(500, 16px, 130%);
-
-    margin: 0 35px 0 0;
-    color: $grey;
-
-    @include mobile {
-      margin: 0 38px 0 0;
-    }
-  }
-
-  &--small {
-    @include text(500, 14px, 130%);
-  }
+  @include text(500, 14px, 130%);
 }
 
 .card__info-list-dd {
   @include reset;
+  @include text(500, 14px, 130%);
+}
 
-  &--big {
-    @include text(500, 16px, 130%);
+.card__info-description {
+  min-height: 98px;
+
+  p {
+    @include reset;
+    @include text(400, 14px, 130%);
+    color: $dark;
   }
 
-  &--small {
-    @include text(500, 14px, 130%);
+  &--hide {
+    display: none;
+  }
+
+  &--show {
+    display: block;
+  }
+
+  @include tablet {
+    p {
+      width: 100%;
+    }
   }
 }
 
