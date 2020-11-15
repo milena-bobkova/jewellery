@@ -5,7 +5,6 @@
   var info = document.querySelector('.card__info-tabs');
   var content = document.querySelectorAll('.card__info-description');
 
-
   var hideTabContentHandler = function (a) {
     for (var i = a; i < content.length; i++) {
       content[i].classList.remove('card__info-description--show');
@@ -13,6 +12,8 @@
       tabs[i].classList.remove('card__info-list-link--active');
     }
   };
+
+  hideTabContentHandler(1);
 
   var showTabContentHandler = function (b) {
     if (content[b].classList.contains('card__info-description--hide')) {

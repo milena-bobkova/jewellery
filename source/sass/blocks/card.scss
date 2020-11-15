@@ -28,6 +28,8 @@
   padding: 10px 0 0 0;
   width: 51.28%;
 
+  position: relative;
+
   display: flex;
   justify-content: space-between;
 
@@ -58,8 +60,20 @@
 }
 
 .card__photo-wrap {
+  @include reset;
+
   margin: 0 0 30px 0;
   width: 100%;
+
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
 
   @include tablet {
     margin: 0;
@@ -76,6 +90,14 @@
 .card__photo-wrap-big {
   width: 78.33%;
 
+  &--hide {
+    display: none;
+  }
+
+  &--show {
+    display: block;
+  }
+
   @include tablet {
     margin: 0 0 14px 0;
     width: 100%;
@@ -84,6 +106,10 @@
 
   @include mobile {
     position: relative;
+
+    &--mob {
+      display: none;
+    }
   }
 }
 
@@ -205,8 +231,13 @@
   margin: 0 35px 0 0;
   color: $dark;
 
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
   &--active {
-    color: $grey
+    color: $grey;
   }
 
   @include mobile {

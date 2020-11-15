@@ -10,36 +10,36 @@
   <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font">
   <link rel="preload" href="fonts/Poppins-Regular.woff" as="font">
   <link href="css/style.min.css" rel="stylesheet">
+
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* Mobile layout by default */
+      background-image: url("js/pixel-glass/preview/card-mobile.jpg");
+    }
+
+    /* Tablet */
+    @media (min-width: 768px) {
+      HTML {
+        /* Tablet layout */
+        background-image: url("js/pixel-glass/preview/card-tablet.jpg");
+      }
+    }
+
+    /* Desktop */
+    @media (min-width: 1024px) {
+      HTML {
+        /* Desktop layout */
+        background-image: url("js/pixel-glass/preview/card-desktop.jpg");
+      }
+    }
+  </style>
+  <link href="js/pixel-glass/styles.css" rel="stylesheet">
+  <script src="js/pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
 </head>
-
-<!-- Pixel Glass -->
-<style>
-  HTML {
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    /* Mobile layout by default */
-    background-image: url("js/pixel-glass/preview/card-mobile.jpg");
-  }
-
-  /* Tablet */
-  @media (min-width: 768px) {
-    HTML {
-      /* Tablet layout */
-      background-image: url("js/pixel-glass/preview/card-tablet.jpg");
-    }
-  }
-
-  /* Desktop */
-  @media (min-width: 1024px) {
-    HTML {
-      /* Desktop layout */
-      background-image: url("js/pixel-glass/preview/card-desktop.jpg");
-    }
-  }
-</style>
-<link href="js/pixel-glass/styles.css" rel="stylesheet">
-<script src="js/pixel-glass/script.js"></script>
-<!-- // Pixel Glass -->
 
 <body>
   <div style="display: none;">
@@ -91,7 +91,7 @@
       <h2 class="visually-hidden">Gold nacklace card</h2>
       <div class="card__photos">
         <div class="card__photos-wrap">
-          <div class="card__photo-wrap">
+          <div class="card__photo-wrap" tabindex="0">
             <picture>
               <source type="image/webp" media="(max-width: 1023px)"
                 srcset="img/gold-necklace-for-women-tablet@1x.webp 1x, img/gold-necklace-for-women-tablet@1x.webp 2x">
@@ -106,7 +106,7 @@
                 alt="gold necklace for women">
             </picture>
           </div>
-          <div class="card__photo-wrap">
+          <div class="card__photo-wrap" tabindex="0">
             <picture>
               <source type="image/webp" media="(max-width: 1023px)"
                 srcset="img/pretty-gold-necklace-tablet@1x.webp 1x, img/pretty-gold-necklace-tablet@2x.webp 2x">
@@ -120,7 +120,7 @@
                 srcset="img/pretty-gold-necklace-desktop@2x.jpg 2x" width="100" height="125" alt="pretty gold necklace">
             </picture>
           </div>
-          <div class="card__photo-wrap">
+          <div class="card__photo-wrap" tabindex="0">
             <picture>
               <source type="image/webp" media="(max-width: 1023px)"
                 srcset="img/womens-necklace-set-tablet@1x.webp 1x, img/womens-necklace-set-tablet@2x.webp 2x">
@@ -154,6 +154,44 @@
               srcset="img/necklace-detail-desktop@2x.jpg 2x" width="470" height="435" alt="necklace detail">
           </picture>
         </div>
+        <div class="card__photo-wrap-big card__photo-wrap-big--mob">
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/necklace-detail-mobile@1x.webp 1x, img/necklace-detail-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/pretty-gold-necklace-tablet@1x.webp 1x, img/pretty-gold-necklace-tablet@2x.webp 2x">
+            <source type="image/webp"
+              srcset="img/pretty-gold-necklace-desktop@1x.webp 1x, img/pretty-gold-necklace-desktop@2x.webp 2x">
+            <!-- 1x: 290px; 2x: 580px -->
+            <source media="(max-width: 767px)"
+              srcset="img/necklace-detail-mobile@1x.jpg 1x, img/necklace-detail-mobile@2x.jpg 2x">
+            <!-- 1x: 97px; 2x: 194px -->
+            <source media="(max-width: 1023px)"
+              srcset="img/pretty-gold-necklace-tablet@1x.jpg 1x, img/pretty-gold-necklace-tablet@2x.jpg 2x">
+            <!-- 1x: 100px; 2x: 200px -->
+            <img class="card__photo" src="img/pretty-gold-necklace-desktop@1x.jpg"
+              srcset="img/pretty-gold-necklace-desktop@2x.jpg 2x" width="100" height="125" alt="pretty gold necklace">
+          </picture>
+        </div>
+        <div class="card__photo-wrap-big card__photo-wrap-big--mob">
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/necklace-detail-mobile@1x.webp 1x, img/necklace-detail-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/womens-necklace-set-tablet@1x.webp 1x, img/womens-necklace-set-tablet@2x.webp 2x">
+            <source type="image/webp"
+              srcset="img/womens-necklace-set-desktop@1x.webp 1x, img/womens-necklace-set-desktop@2x.webp 2x">
+            <!-- 1x: 290px; 2x: 580px -->
+            <source media="(max-width: 767px)"
+              srcset="img/necklace-detail-mobile@1x.jpg 1x, img/necklace-detail-mobile@2x.jpg 2x">
+            <!-- 1x: 97px; 2x: 194px -->
+            <source media="(max-width: 1023px)"
+              srcset="img/womens-necklace-set-tablet@1x.jpg 1x, img/womens-necklace-set-tablet@2x.jpg 2x">
+            <!-- 1x: 100px; 2x: 200px -->
+            <img class="card__photo" src="img/womens-necklace-set-desktop@1x.jpg"
+              srcset="img/womens-necklace-set-desktop@2x.jpg 2x" width="100" height="125" alt="womens necklace set">
+          </picture>
+        </div>
         <div class="card__photo-num">1 of 4</div>
       </div>
       <div class="card__info">
@@ -177,7 +215,7 @@
             <dd class="card__info-list-dd">18” / 20”</dd>
           </dl>
         </div>
-        <div class="card__info-description card__info-description--hide">
+        <div class="card__info-description">
           <p>All items come with a CHJewellery presentation box and items over $100 come with an insurance valuation.
           </p>
         </div>
