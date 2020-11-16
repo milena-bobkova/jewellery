@@ -127,7 +127,7 @@
     padding: 9px 0;
 
     font-family: "Poppins", "Arial", sans-serif;
-    color: $grey;
+    color: $black;
 
     width: 100%;
     background-color: transparent;
@@ -138,6 +138,10 @@
     &:hover,
     &:focus {
       outline: 1px solid $brown;
+    }
+
+    &::placeholder {
+      color: $grey;
     }
   }
 

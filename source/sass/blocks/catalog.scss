@@ -281,6 +281,7 @@ input[name="filter"] {
 .catalog__filter__check-field {
   padding: 0 0 0 24px;
   position: relative;
+  cursor: pointer;
 
   &::before {
     @include pseudo;
@@ -384,6 +385,17 @@ input[name="filter"] {
     }
   }
 }
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 
 .catalog__filter-toggle {
   position: absolute;

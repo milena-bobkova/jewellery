@@ -234,7 +234,7 @@
 
 (function () {
   var smallPictures = document.querySelectorAll('.card__photo-wrap');
-  var picturesContainer = document.querySelector('.card__photos-wrap');
+  var picturesContainer = document.querySelector('.card__photos-wrap-small');
   var bigPictures = document.querySelectorAll('.card__photo-wrap-big');
   var hideBigPicturesHandler = function (a) {
     for (var i = a; i < bigPictures.length; i++) {

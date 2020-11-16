@@ -134,7 +134,7 @@
     width: 78%;
     border: none;
     background-color: transparent;
-    color: $grey;
+    color: $white;
     font-family: "Poppins", "Arial", sans-serif;
     text-align: left;
     border-radius: 0;
@@ -142,6 +142,10 @@
     &:hover,
     &:focus {
       outline: 1px solid $white;
+    }
+
+    &::placeholder {
+      color: $grey;
     }
   }
 
