@@ -49,10 +49,10 @@
 
   var menuItems = menu.querySelectorAll('.page-header__link');
 
-  menuItems.forEach(function (item) {
-    item.addEventListener('click', function () {
+  for (var i = 0; i < menuItems.length; i++) {
+    menuItems[i].addEventListener('click', function () {
       closeMenu();
     });
-  });
+  }
 
 })();

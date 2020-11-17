@@ -6,9 +6,9 @@
   var dropdownIcons = document.querySelectorAll('.dropdown__button');
   var dropdownItems = document.querySelectorAll('.dropdown__item');
 
-  dropdowns.forEach(function (dropdown) {
-    dropdown.classList.remove('dropdown--nojs');
-  });
+  for (var j = 0; j < dropdowns.length; j++) {
+    dropdowns[j].classList.remove('dropdown--nojs');
+  }
 
   var dropdownHandler = function (button, item, icon) {
     button.addEventListener('click', function (evt) {

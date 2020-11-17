@@ -5,9 +5,9 @@
   var dropdownButtons = document.querySelectorAll('.dropdown__click');
   var dropdownIcons = document.querySelectorAll('.dropdown__button');
   var dropdownItems = document.querySelectorAll('.dropdown__item');
-  dropdowns.forEach(function (dropdown) {
-    dropdown.classList.remove('dropdown--nojs');
-  });
+  for (var j = 0; j < dropdowns.length; j++) {
+    dropdowns[j].classList.remove('dropdown--nojs');
+  }
   var dropdownHandler = function (button, item, icon) {
     button.addEventListener('click', function (evt) {
       evt.preventDefault();
@@ -98,11 +98,11 @@
     }
   };
   var menuItems = menu.querySelectorAll('.page-header__link');
-  menuItems.forEach(function (item) {
-    item.addEventListener('click', function () {
+  for (var i = 0; i < menuItems.length; i++) {
+    menuItems[i].addEventListener('click', function () {
       closeMenu();
     });
-  });
+  }
 })();
 
 (function () {
@@ -335,17 +335,20 @@
       tabs[b].classList.add('card__info-list-link--active');
     }
   };
-  if (info !== null && tabs.length > 0 && content.length > 0) {
-    info.addEventListener('click', function (evt) {
-      var target = evt.target;
-      if (target && target.classList.contains('card__info-list-link')) {
-        for (var i = 0; i < tabs.length; i++) {
-          if (target === tabs[i]) {
-            hideTabContentHandler(0);
-            showTabContentHandler(i);
+  var clickTab = function () {
+    if (info !== null && tabs.length > 0 && content.length > 0) {
+      info.addEventListener('click', function (evt) {
+        var target = evt.target;
+        if (target && target.classList.contains('card__info-list-link')) {
+          for (var i = 0; i < tabs.length; i++) {
+            if (target === tabs[i]) {
+              hideTabContentHandler(0);
+              showTabContentHandler(i);
+            }
           }
         }
-      }
-    });
-  }
+      });
+    }
+  };
+  clickTab();
 })();
