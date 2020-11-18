@@ -13,8 +13,6 @@
     }
   };
 
-  hideTabContentHandler(1);
-
   var showTabContentHandler = function (b) {
     if (content[b].classList.contains('card__info-description--hide')) {
       content[b].classList.remove('card__info-description--hide');
@@ -26,7 +24,6 @@
   var clickTab = function () {
     if (info !== null && tabs.length > 0 && content.length > 0) {
       info.addEventListener('click', function (evt) {
-        evt.preventDefault();
         var target = evt.target;
         if (target && target.classList.contains('card__info-list-link')) {
           for (var i = 0; i < tabs.length; i++) {
