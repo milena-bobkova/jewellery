@@ -166,7 +166,7 @@
 
   &:hover,
   &:focus {
-    outline: 1px solid $black;
+    border: 1px solid $black;
   }
 
   &::placeholder {

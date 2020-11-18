@@ -713,7 +713,7 @@ a {
   border-radius: 0;
   text-indent: 25px; }
   .page-header__search input:hover, .page-header__search input:focus {
-    outline: 1px solid #000000; }
+    border: 1px solid #000000; }
   .page-header__search input::-webkit-input-placeholder {
     color: #9b9997; }
   .page-header__search input::-moz-placeholder {
