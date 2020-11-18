@@ -146,17 +146,6 @@
 
 .page-header__search {
   padding: 12px 0 0 0;
-  position: relative;
-
-  &::before {
-    @include pseudo;
-    top: 18px;
-    left: 0;
-
-    width: 14px;
-    height: 14px;
-    background-image: url("../img/search.svg");
-  }
 }
 
 .page-header__search input {
@@ -188,6 +177,22 @@
 input[type="search"] {
   border: none;
   border-style: none;
+}
+
+.page-header__search-label {
+  position: relative;
+
+  &::before {
+    @include pseudo;
+    top: 50%;
+    left: 0;
+
+    transform: translate(0, -50%);
+
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/search.svg");
+  }
 }
 
 .page-header__logo-wrap {
