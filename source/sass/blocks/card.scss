@@ -226,10 +226,15 @@
 }
 
 .card__info-list-link {
+  @include reset;
   @include text(500, 16px, 130%);
+  font-family: "Poppins", "Arial", sans-serif;
 
   margin: 0 35px 0 0;
   color: $dark;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 
   &:hover,
   &:focus {

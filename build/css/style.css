@@ -2757,11 +2757,17 @@ input::-webkit-inner-spin-button {
       margin: 0 0 32px 0; } }
 
 .card__info-list-link {
+  padding: 0;
+  margin: 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
+  font-family: "Poppins", "Arial", sans-serif;
   margin: 0 35px 0 0;
-  color: #1d1613; }
+  color: #1d1613;
+  background-color: transparent;
+  border: none;
+  cursor: pointer; }
   .card__info-list-link:hover, .card__info-list-link:focus {
     opacity: 0.7; }
   .card__info-list-link--active {
