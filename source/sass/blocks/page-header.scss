@@ -519,6 +519,25 @@ input[type="search"] {
           background-color: #b58f7a;
           border-radius: 21px;
 
+          margin: 0;
+
+          border-bottom-left-radius: 21px;
+          border-bottom-right-radius: 21px;
+          border-top-left-radius: 21px;
+          border-top-right-radius: 21px;
+          border-bottom-width: 0;
+          border-top-width: 0;
+          border-right-width: 0;
+          border-left-width: 0;
+
+          padding-bottom: 10px;
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-top: 10px;
+
+          font-size: 14px;
+          line-height: 21px;
+
           &::placeholder {
             font-size: 0;
           }
