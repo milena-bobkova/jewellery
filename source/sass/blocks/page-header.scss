@@ -164,9 +164,9 @@
 
   text-indent: 25px;
 
-  &:hover,
   &:focus {
-    border: 1px solid $black;
+    border: none;
+    outline: none;
   }
 
   &::placeholder {
@@ -181,8 +181,15 @@ input[type="search"] {
 
 .page-header__search-label {
   position: relative;
-  display: block;
   height: auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:focus-within {
+    border: 1px solid black;
+  }
 
   &::before {
     @include pseudo;
@@ -514,10 +521,10 @@ input[type="search"] {
         order: 1;
 
         input {
-          padding: 10px;
           width: 100%;
-          background-color: #b58f7a;
-          border-radius: 21px;
+          background-color: transparent;
+          text-indent: 25px;
+          width: calc(100% - 24px);
 
           margin: 0;
 
@@ -530,10 +537,10 @@ input[type="search"] {
           border-right-width: 0;
           border-left-width: 0;
 
-          padding-bottom: 10px;
-          padding-left: 10px;
-          padding-right: 10px;
-          padding-top: 10px;
+          padding-bottom: 0;
+          padding-left: 0;
+          padding-right: 0;
+          padding-top: 0;
 
           font-size: 14px;
           line-height: 21px;
@@ -545,6 +552,20 @@ input[type="search"] {
       }
 
       .page-header__search-label {
+        height: 40px;
+        box-sizing: border-box;
+        background-color: #b58f7a;
+        border-radius: 21px;
+
+        &:hover {
+          border: 1px solid black;
+          cursor: pointer;
+        }
+
+        &:focus-within {
+          border: 1px solid black;
+        }
+
         &::before {
           left: 12px;
           background-image: url("../img/search-white.svg");
@@ -703,9 +724,10 @@ input[type="search"] {
 
       .page-header__search {
         margin: 0 0 35px 0;
+        padding: 30px 0 0 0;
 
         input {
-          margin: 15px 0 0 0;
+          margin: 0;
         }
       }
 
