@@ -161,6 +161,12 @@
 
   border: none;
   border-radius: 0;
+  background-color: transparent;
+
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
 
   text-indent: 25px;
 
@@ -522,16 +528,13 @@ input[type="search"] {
 
         input {
           width: 100%;
-          background-color: transparent;
+          background-color: #b58f7a;
+          border-color: #b58f7a;
           text-indent: 25px;
           width: calc(100% - 24px);
 
           margin: 0;
 
-          border-bottom-left-radius: 21px;
-          border-bottom-right-radius: 21px;
-          border-top-left-radius: 21px;
-          border-top-right-radius: 21px;
           border-bottom-width: 0;
           border-top-width: 0;
           border-right-width: 0;
